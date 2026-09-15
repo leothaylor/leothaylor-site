@@ -1,11 +1,11 @@
 ---
 title: AI Extension Lab
-summary: "Laboratório de agentes e extensões criados para repetir tarefas com o mesmo padrão sem reexplicar todas as regras a cada conversa. Reúne GPTs e outras arquiteturas com Instructions, Knowledge, testes, erros conhecidos e versões."
+summary: "Laboratório de extensões GPT criadas para tarefas repetitivas e padronizadas. Cada agente resolve um tipo de trabalho específico: direção visual, identidade, storyboard, roteiro, produto, mapas ou produção de conteúdo."
 category: Laboratório
 status: Em laboratório
 year: "2026"
 role: Desenho de sistema, instruções, base de conhecimento e validação
-proof: "O histórico reúne Kimono Fusion, LT Storyboard, Jussan Storyboard, Oficina de Inserts Visuais, LT Asset Forge e CinePrompter Projeto 60, com níveis diferentes de maturidade e validação."
+proof: "A seleção pública reúne oito extensões com uso real, resultado visual forte ou utilidade operacional clara: Kimono Fusion, FaceLock, Visual DNA, Jussan Storyboard, Roteirista ROTINA ACS, Designer Editorial ACS Flat 2D, Virtual Outfit Identity Lock e Gerador de Mapas NotebookLM."
 featured: false
 order: 10
 tags: [IA, agentes, prompt systems, validação, design]
@@ -14,192 +14,230 @@ accent2: "#D8C36A"
 surface: "#111827"
 ink: "#F5F7FF"
 metrics:
-  - value: "6"
-    label: extensões documentadas
+  - value: "8"
+    label: extensões selecionadas
   - value: "2"
-    label: formatos validados no LT Storyboard
-  - value: "V1"
-    label: Kimono Fusion validado visualmente
+    label: usadas com frequência
+  - value: "6"
+    label: usadas ou validadas na prática
   - value: "GPT"
     label: agentes especializados
 ---
 ## Para que existe
 
-Algumas tarefas voltam muitas vezes e exigem as mesmas regras. Quando isso acontece, prefiro transformar a tarefa em uma extensão especializada em vez de reconstruir o contexto do zero em cada conversa.
+Eu crio extensões quando uma tarefa começa a exigir as mesmas regras muitas vezes.
 
-O AI Extension Lab é o lugar onde organizo esses agentes. Ele serve para criar, versionar e testar Custom GPTs, Gems, Projects e arquiteturas equivalentes voltadas para tarefas delimitadas.
+Em vez de reexplicar tudo em cada conversa, transformo a tarefa em um agente especializado. A extensão recebe uma entrada conhecida, aplica um conjunto de regras estáveis e devolve um resultado dentro de um formato esperado.
 
-O objetivo principal é consistência. Uma extensão boa precisa receber uma entrada conhecida, aplicar regras estáveis e devolver um resultado previsível o bastante para entrar em um fluxo de trabalho real.
+Na prática, isso serve para coisas como:
 
-## Como o laboratório é organizado
+- transformar uma arte em um produto físico coerente;
+- copiar a estrutura visual de uma referência sem copiar literalmente a peça;
+- preservar um rosto enquanto a cena inteira muda;
+- trocar roupa sem alterar pose, corpo ou identidade;
+- converter briefing em storyboard;
+- gerar dezenas de opções de roteiro a partir de um briefing editorial;
+- criar prompts dentro de uma linguagem visual fixa;
+- preparar estruturas hierárquicas para mapas no NotebookLM.
 
-Cada extensão pode ter um registro próprio com:
-
-- objetivo e escopo;
-- versão atual;
-- Instructions;
-- arquivos de Knowledge;
-- testes e experimentos;
-- erros e failure modes;
-- padrões de sucesso;
-- histórico de mudanças;
-- próxima validação necessária.
-
-Eu também separo os estados de maturidade. `Criado`, `testado`, `validado` e `generalizado` significam coisas diferentes. Um resultado visual bom em um teste comprova aquele teste, mas não garante que o agente já funcione bem em qualquer situação.
+O inventário completo fica no meu sistema interno. Aqui estão somente as extensões que hoje representam melhor esse trabalho.
 
 ## Kimono Fusion Design Engine
 
-O Kimono Fusion recebe uma arte de referência e tenta transformá-la em um kimono premium de jiu-jitsu.
+O Kimono Fusion nasceu de uma ideia de produto que eu já carregava: criar kimonos artísticos de jiu-jitsu com aparência de peça realmente fabricável.
 
-A tarefa parece simples até o produto precisar aparecer em várias vistas. Frente, costas e detalhes precisam mostrar o mesmo kimono. Durante os primeiros testes, mudar a câmera podia alterar gola, patch, estampa, proporções ou posição dos elementos.
+Eu envio uma arte de referência. Pode ser anime, filme, ilustração, fotografia, pintura ou outra linguagem visual. A extensão analisa essa arte e cria um MASTER PROMPT para transformar a referência em um kimono premium.
 
-A arquitetura passou a separar:
+O ponto mais importante é a continuidade.
 
-- características que pertencem ao produto e precisam permanecer congeladas;
-- regras de apresentação que podem variar com a câmera;
-- vetos explícitos;
-- referências visuais;
-- conhecimento permanente sobre o produto.
+Não basta gerar um kimono bonito de frente e outro bonito de costas. Frente, costas, interior, macros e product board precisam parecer fotografias do mesmo produto.
 
-A regra operacional central ficou: **a câmera muda; o produto permanece igual**.
+Por isso o sistema separa o que pode mudar do que precisa ficar congelado.
 
-O sistema já teve validação visual positiva em casos específicos. A generalização continua sendo tratada como uma etapa separada.
+**Permanece igual:**
 
-Quando eu adicionar a documentação visual completa ao site, este case vai mostrar a sequência inteira: arte de entrada, print do uso do agente e imagens finais do kimono em múltiplas vistas.
+- corte do kimono;
+- cor-base;
+- gola;
+- patches;
+- arte interna;
+- emblemas;
+- etiquetas;
+- costura;
+- faixa;
+- linguagem do produto.
 
-## LT Storyboard
+**Pode mudar:**
 
-O LT Storyboard foi criado para uma tarefa repetitiva da produção de conteúdo: pegar um roteiro já decidido e convertê-lo em material de pré-produção visual.
+- câmera;
+- enquadramento;
+- distância;
+- abertura da jaqueta;
+- crop;
+- composição da foto.
 
-O fluxo é:
+O resultado é uma série de imagens realistas do mesmo kimono em vários ângulos. Tenho exemplos visuais bons dessa sequência e eles são uma das melhores provas do que essa extensão faz.
 
-`estratégia e roteiro prontos → briefing textual → mapa de produção → storyboard visual`
+**Uso atual:** ocasional, mas validado visualmente e com alto valor de portfólio.
 
-Ele recebe informações como formato, objetivo, cenas, copy, função de cada parte, enquadramentos já definidos, CTA e identidade visual. A saída organiza o que precisa ser gravado e gera uma prancha que pode ser usada durante a produção.
+## FaceLock Prompt Engine
 
-A ferramenta já foi validada em dois formatos diferentes:
+O FaceLock resolve outro problema recorrente.
 
-- carrossel com seis slides;
-- Reel documental com seis cenas.
+Eu encontro no Pinterest ou em campanhas uma foto com pose, luz, cenário ou direção de arte interessante. Envio essa referência para a extensão. Ela desmonta a estrutura da imagem e devolve um prompt preparado para reconstruir aquela cena com a minha própria foto.
 
-Nos dois testes, o agente preservou a estrutura, manteve a primeira pessoa, aplicou a identidade LT e evitou inventar CTA ou alterar a tese original.
+O objetivo é preservar minha identidade facial enquanto muda o restante da cena.
 
-O ganho prático aparece na hora da gravação. Em vez de reler um roteiro longo e interpretar tudo novamente, a prancha mostra a ordem, o enquadramento, a ação, o texto e os inserts necessários.
+O fluxo prático é:
+
+`foto de referência → FaceLock → prompt estruturado → nova conversa com prompt + minha foto → cena reconstruída`
+
+A extensão tenta preservar:
+
+- rosto;
+- cabelo;
+- proporções;
+- características pessoais;
+- pose solicitada;
+- direção de câmera;
+- luz;
+- ambiente;
+- composição.
+
+É especialmente útil quando quero uma fotografia editorial ou cinematográfica com uma direção visual específica, mas sem perder minha identidade no processo.
+
+**Uso atual:** ocasional. Foi uma das extensões com maior volume de uso e continua útil quando quero produzir imagens pessoais com direção visual forte.
+
+## Visual DNA Prompt Engine
+
+O Visual DNA Prompt Engine trabalha com identidade visual de peças, não com identidade facial.
+
+Eu posso pegar uma arte que gostei e usar como referência estrutural. A extensão analisa paleta, tipografia, hierarquia, composição, textura, distribuição de elementos e linguagem visual.
+
+Depois eu entrego uma nova copy.
+
+Exemplo:
+
+- referência: uma peça editorial com estátua grega;
+- slide 1: "Como criar uma extensão GPT";
+- slide 2: "Como definir as regras";
+- slide 3: "Como testar o resultado".
+
+A extensão cria prompts para esses novos slides mantendo o universo visual da referência, sem simplesmente repetir a mesma composição.
+
+Isso permite transformar uma única referência em uma pequena linguagem visual reutilizável.
+
+Usei essa lógica também em trabalhos da Neural Concursos, onde uma arte aprovada passou a funcionar como fonte de DNA visual para peças seguintes.
+
+**Uso atual:** ocasional. Continua sendo uma das ferramentas mais interessantes quando encontro uma referência visual forte e quero construir novas peças dentro daquela lógica.
 
 ## Jussan Storyboard
 
-Outra extensão foi criada para a operação de conteúdo do Jussan.
+O Jussan Storyboard foi criado para transformar conteúdo escrito em uma orientação visual suficientemente clara para outra pessoa executar.
 
-O objetivo é transformar conteúdos já estruturados em orientação visual suficiente para ele conseguir gravar e produzir sem depender de uma explicação nova a cada peça.
+Eu já tinha o tema, a estrutura e o roteiro. A extensão organizava isso em uma prancha visual com ordem de gravação, enquadramentos, ações, texto e referência de cena.
 
-Um storyboard produzido para a rodada de conteúdo de 01/09 virou benchmark interno da extensão. A utilidade aqui está em padronizar decisões recorrentes de enquadramento, composição e sequência sem transformar a operação em edição pesada feita por mim.
+O ganho apareceu rapidamente: Jussan conseguia olhar o storyboard e entender como gravar sem precisar receber outra explicação longa minha.
 
-Esse tipo de agente também ajuda a manter o limite do projeto: eu posso estruturar o sistema e o material de produção, enquanto a execução cotidiana continua com o próprio Jussan.
+Um storyboard feito para a rodada de conteúdo de 01/09 virou benchmark interno. Jussan gostou do formato e eu também mostrei a ideia ao Digão, que reagiu bem.
 
-## Oficina de Inserts Visuais
+A função da extensão pode ser resumida assim:
 
-A **Oficina de Inserts Visuais — Leo Thaylor** surgiu em junho de 2026 para transformar roteiros talkhead em um plano visual executável.
+`conteúdo decidido → briefing → storyboard visual → gravação`
 
-A extensão funciona como diretor visual operacional e arquiteto de prompts. Ela recebe o roteiro ou uma frase, identifica a função que o visual precisa cumprir e propõe os inserts prioritários para aquela peça.
+Esse tipo de ferramenta me interessa porque transforma conhecimento implícito de direção em um objeto que pode ser entregue para outra pessoa.
 
-O fluxo planejado e testado durante a construção foi:
+**Uso atual:** ocasional. Validado em uso com terceiro e com exemplos visuais que podem ser mostrados no case.
 
-`roteiro → mapa visual → imagem-mãe → Flow/Veo ou Omni → Canva → CapCut`
+## Roteirista ROTINA ACS
 
-Cada ferramenta tinha uma função específica:
+Hoje é uma das extensões que mais uso.
 
-- Gemini Imagem para criar a imagem-mãe;
-- Flow/Veo para transformar essa base em clipes curtos;
-- Omni para trabalhar sobre vídeo real preservando rosto, câmera, gesto e timing;
-- Canva para texto e composição;
-- CapCut para ritmo, legenda, som e montagem final.
+O Roteirista ROTINA ACS recebe um briefing editorial que já foi organizado no Notion e devolve várias opções de roteiro.
 
-O talkhead continuava como eixo. Os inserts entravam para explicar uma ideia, provar algo, criar contraste, marcar uma frase, representar pensamento ou quebrar o ritmo visual.
+Antes eu usava a ferramenta para conversar e chegar a um roteiro único. O fluxo evoluiu.
 
-O roteiro **NÃO VAI DAR TEMPO** foi usado como material de teste durante a criação. Um dos primeiros assets, chamado internamente de Tela Chumbo, foi descartado porque parecia background genérico e ainda saiu horizontal. Esse tipo de erro passou a orientar as regras seguintes de composição e formato.
+Hoje funciona melhor assim:
 
-A arquitetura chegou a prever até cinco inserts prioritários por roteiro e prompts específicos por ferramenta. O histórico recuperado não comprova um vídeo final passando por 100% do pipeline, então registro esta extensão como **protótipo avançado testado durante produção**, sem tratar a cadeia completa como validada.
+`briefing estruturado no Notion → lote de roteiros → peneira humana → seleção → produção`
 
-## LT Asset Forge
+A extensão não decide sozinha o que vai ser publicado. Ela amplia o espaço de opções.
 
-O **LT Asset Forge** foi criado em julho de 2026 para produzir uma biblioteca visual reutilizável para motion graphics.
+Eu comparo os roteiros, descarto os fracos, combino partes quando necessário e escolho o que realmente vale produzir.
 
-O problema era recorrente: cada Reel, vídeo em Remotion ou montagem no CapCut podia exigir ícones, objetos isolados, overlays, inserts e backgrounds que precisavam parecer parte do mesmo universo visual.
+Isso é útil porque preserva a linguagem e os problemas reais do ACS sem depender de uma conversa longa toda vez que quero explorar novos ângulos.
 
-A extensão organiza esse trabalho em categorias e templates. Ela recebe o tipo de asset desejado e monta a direção visual, o prompt e as restrições para geração.
+**Uso atual:** frequente. É uma extensão operacional, não apenas um experimento.
 
-Uma parte importante do sistema foi separar **identidade** de **ação**. Em gerações com uma foto minha como referência, a foto serve para preservar quem aparece e o prompt define pose, gesto, cena e contexto. Regras anti-retrato foram adicionadas para evitar que o modelo voltasse sempre para a mesma pose de fotografia promocional.
+## Designer Editorial ACS Premium Flat 2D
 
-Também passei a usar fundo verde-limão em assets isolados para facilitar remoção automática e reaproveitamento posterior em CapCut, Remotion e outras ferramentas.
+Também está entre as extensões que mais uso.
 
-O histórico registra testes no Google Flow com:
+O ROTINA ACS possui formatos visuais próprios. Um deles é o Flat 2D, com personagem ACS, composição específica, copy integrada e regras visuais já definidas.
 
-- mockups vivos;
-- containers com pessoa;
-- detalhes editoriais;
-- mini-personagem isolado;
-- objetos e elementos de comunicação para motion.
+Quando tenho roteiro, copy e direção visual, envio esse material para a extensão. Ela devolve prompts prontos dentro desse formato.
 
-Um teste de braço ajustando faixa falhou porque o modelo entregou um casaco comum em vez de kimono. O erro entrou como referência para prompts mais específicos de roupa e contexto.
+Na prática:
 
-A linguagem visual segue o sistema LT: escuro, concreto, editorial e cinematográfico, evitando neon, roxo, estética de startup e aparência de coach.
+`roteiro + copy + direção visual → extensão → prompt visual pronto → geração da arte`
 
-As imagens originais desses testes não ficaram preservadas junto da documentação que recuperei agora. Por isso considero o Asset Forge **usado e parcialmente validado no histórico**, mas ainda quero anexar evidência visual ao case quando os arquivos forem localizados.
+Isso evita reescrever toda a especificação visual do canal a cada slide.
 
-## CinePrompter | Projeto 60 (Sora 2)
+O valor está justamente na especialização. A extensão conhece as restrições daquele formato específico e trabalha dentro delas.
 
-O **CinePrompter | Projeto 60 (Sora 2)** é um caso histórico de 2025 e mostra uma abordagem mais estruturada do que simplesmente escrever um prompt de vídeo.
+**Uso atual:** frequente. É uma das ferramentas mais maduras do laboratório porque participa diretamente da produção atual do ROTINA ACS.
 
-Ele foi desenhado para transformar uma ideia do Projeto 60 em prompts e storyboards curtos para Sora 2, mantendo cenário, objetos, continuidade, linguagem visual e pilares recorrentes da série.
+## Virtual Outfit Identity Lock GPT
 
-A base de conhecimento incluía arquivos separados para:
+O Virtual Outfit faz uma edição controlada de roupa e acessórios.
 
-- resumo do Projeto 60;
-- cena-base da casa;
-- regras de captação e edição;
-- métricas e alertas;
-- âncoras visuais e sonoras;
-- continuidade entre clipes de até 15 segundos;
-- treino;
-- dieta;
-- corrida;
-- saúde mental;
-- catálogo de hooks;
-- registro de execuções.
+Eu envio uma foto minha e uma referência de uma peça, por exemplo:
 
-A saída padrão combinava **PROMPT Sora 2 + CHECKLIST**. Quando necessário, acrescentava um storyboard.
+- camisa;
+- tênis;
+- relógio;
+- casaco;
+- acessório.
 
-O prompt seguia uma estrutura estável com câmera, sujeito, ação, ambiente, física, estilo, continuidade, áudio e duração. Narrativas maiores eram quebradas em três partes: hook/identidade, ação e resultado/loop.
+A extensão gera um prompt para aplicar aquela peça à minha foto preservando o restante.
 
-Exemplos trabalhados no histórico usavam elementos concretos da rotina, como corrida, treino, cozinha, smartwatch, halteres e métricas na tela. A ideia era reduzir o atrito entre pensar a cena e conseguir uma instrução de geração suficientemente específica.
+A pessoa precisa continuar sendo a mesma. Pose, corpo, enquadramento, rosto e cenário não deveriam mudar só porque a roupa foi trocada.
 
-O sistema também registrava metas de retenção e conclusão para os vídeos. O histórico recuperado não contém logs suficientes para afirmar que essas metas foram atingidas em produção.
+O resultado ficou especialmente bom nos testes que fiz. Ele funciona quase como um provador virtual baseado em geração de imagem, mas com foco em preservar identidade e composição.
 
-Mais tarde, falhas persistentes do Sora 2 fizeram o Projeto 60 migrar para um uso mais complementar de IA e para produção com vídeo real. Mesmo assim, o CinePrompter continua útil como registro de um princípio que permaneceu nas extensões posteriores: **separar conhecimento permanente, variáveis do episódio e contrato de saída**.
+**Uso atual:** ocasional. Não é uma ferramenta que preciso toda semana, mas o resultado é forte e demonstra bem a lógica de identity lock.
 
-## O padrão de criação
+## Gerador de Mapas NotebookLM | OS Leo
 
-Quando uma tarefa começa a se repetir, eu sigo uma lógica parecida:
+Essa extensão nasceu de um problema diferente: transformar informação complexa em uma estrutura que o NotebookLM consiga renderizar corretamente como mapa.
 
-1. identifico o que está sendo reexplicado toda vez;
-2. separo regra fixa de contexto variável;
-3. transformo as regras fixas em Instructions e Knowledge;
-4. defino o formato de entrada e de saída;
-5. testo com material real;
-6. registro falhas e comportamentos bons;
-7. ajusto o agente sem apagar o histórico do que já foi aprendido.
+Eu usava em situações como planejamento de reunião, fluxograma, currículo ou estrutura de decisão.
 
-Isso cria uma memória operacional para aquela tarefa.
+O erro comum era mandar um texto grande e esperar que o NotebookLM descobrisse sozinho quais elementos eram pais, filhos e subníveis.
 
-## Onde esse tipo de extensão faz mais sentido
+A extensão passou a fazer essa arquitetura antes.
 
-Uso essa abordagem principalmente quando existe alguma combinação de:
+O fluxo ficou:
 
-- repetição;
-- identidade visual que precisa ser preservada;
-- estrutura de saída fixa;
-- muitas regras pequenas fáceis de esquecer;
-- necessidade de impedir improvisos indesejados;
-- tarefa que pode ser delegada para a IA depois que o método foi definido.
+`conversa ou conteúdo bruto → estrutura hierárquica serializada → NotebookLM → mapa/fluxograma`
 
-O laboratório continua aberto porque novas extensões só fazem sentido quando uma atividade real começa a repetir o suficiente para justificar um sistema próprio.
+Usei essa lógica, por exemplo, para organizar estruturas ligadas ao BJJ e à trajetória faixa branca → azul.
+
+A extensão não tenta ser o mapa final. Ela prepara a informação para que a ferramenta de visualização receba uma árvore explícita e tenha menos espaço para interpretar a hierarquia de forma errada.
+
+**Uso atual:** ocasional. Continua útil sempre que preciso transformar raciocínio complexo em uma representação visual organizada.
+
+## O padrão por trás das oito extensões
+
+Apesar de resolverem problemas diferentes, quase todas seguem a mesma arquitetura.
+
+1. Identificar a tarefa que está se repetindo.
+2. Separar regra fixa de contexto variável.
+3. Definir o que pode mudar e o que precisa permanecer travado.
+4. Criar um formato claro de entrada.
+5. Criar um formato claro de saída.
+6. Testar com material real.
+7. Guardar erros, restrições e casos que funcionaram.
+8. Ajustar a extensão sem perder o aprendizado anterior.
+
+É por isso que uso extensões principalmente para tarefas padronizadas e repetitivas. Quando o trabalho depende de histórico longitudinal, memória pessoal ou contexto acumulado, prefiro outras estruturas, como projetos e bases no Notion.
