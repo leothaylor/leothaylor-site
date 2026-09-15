@@ -16,9 +16,9 @@ export async function GET({ site }: { site: URL }) {
 
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0"><channel>
-    <title>Notas — Leo Thaylor</title>
+    <title>Notas · Leo Thaylor</title>
     <link>${new URL(base, site).href}</link>
-    <description>Projetos, sistemas, decisões e aprendizados.</description>
+    <description>Projetos, sistemas, decisões, testes e aprendizados.</description>
     <language>pt-BR</language>${items}
   </channel></rss>`;
 
