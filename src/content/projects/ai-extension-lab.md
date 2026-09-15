@@ -80,6 +80,33 @@ O resultado é uma série de imagens realistas do mesmo kimono em vários ângul
 
 **Uso atual:** ocasional, mas validado visualmente e com alto valor de portfólio.
 
+<div class="kimono-showcase">
+  <section class="kimono-model">
+    <div class="kimono-model__head"><div><span>MODELO 01</span><strong>Kimono Fusion</strong></div><small>3 imagens do mesmo produto</small></div>
+    <div class="kimono-model__grid">
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-01-01.png" alt="Kimono Fusion, modelo 01, imagem 01" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 01</span><strong>Aguardando arquivo</strong><code>kimono-01-01.png</code></div><figcaption>Modelo 01 · imagem 01</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-01-02.png" alt="Kimono Fusion, modelo 01, imagem 02" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 02</span><strong>Aguardando arquivo</strong><code>kimono-01-02.png</code></div><figcaption>Modelo 01 · imagem 02</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-01-03.png" alt="Kimono Fusion, modelo 01, imagem 03" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 03</span><strong>Aguardando arquivo</strong><code>kimono-01-03.png</code></div><figcaption>Modelo 01 · imagem 03</figcaption></figure>
+    </div>
+  </section>
+  <section class="kimono-model">
+    <div class="kimono-model__head"><div><span>MODELO 02</span><strong>Kimono Fusion</strong></div><small>3 imagens do mesmo produto</small></div>
+    <div class="kimono-model__grid">
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-02-01.png" alt="Kimono Fusion, modelo 02, imagem 01" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 01</span><strong>Aguardando arquivo</strong><code>kimono-02-01.png</code></div><figcaption>Modelo 02 · imagem 01</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-02-02.png" alt="Kimono Fusion, modelo 02, imagem 02" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 02</span><strong>Aguardando arquivo</strong><code>kimono-02-02.png</code></div><figcaption>Modelo 02 · imagem 02</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-02-03.png" alt="Kimono Fusion, modelo 02, imagem 03" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 03</span><strong>Aguardando arquivo</strong><code>kimono-02-03.png</code></div><figcaption>Modelo 02 · imagem 03</figcaption></figure>
+    </div>
+  </section>
+  <section class="kimono-model kimono-model--pending">
+    <div class="kimono-model__head"><div><span>MODELO 03</span><strong>Espaço reservado</strong></div><small>próximo conjunto · 3 imagens</small></div>
+    <div class="kimono-model__grid">
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-03-01.png" alt="Kimono Fusion, modelo 03, imagem 01" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 01</span><strong>Próximo upload</strong><code>kimono-03-01.png</code></div><figcaption>Modelo 03 · imagem 01</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-03-02.png" alt="Kimono Fusion, modelo 03, imagem 02" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 02</span><strong>Próximo upload</strong><code>kimono-03-02.png</code></div><figcaption>Modelo 03 · imagem 02</figcaption></figure>
+      <figure class="kimono-slot"><img class="kimono-slot__img" src="../../project-media/ai-extension-lab/kimono-fusion/kimono-03-03.png" alt="Kimono Fusion, modelo 03, imagem 03" loading="lazy"><div class="kimono-slot__placeholder"><span>IMAGEM 03</span><strong>Próximo upload</strong><code>kimono-03-03.png</code></div><figcaption>Modelo 03 · imagem 03</figcaption></figure>
+    </div>
+  </section>
+</div>
+
 ## FaceLock Prompt Engine
 
 O FaceLock resolve outro problema recorrente.
