@@ -90,10 +90,30 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
 </BaseLayout>
 
 <script is:inline>
+  const refreshKimonoModel = (model) => {
+    if (!model) return;
+    const images = [...model.querySelectorAll('.kimono-slot__img')];
+    const ready = images.length > 0 && images.every((img) => img.complete && img.naturalWidth > 0);
+    if (!ready) return;
+
+    model.classList.remove('kimono-model--pending');
+    const title = model.querySelector('.kimono-model__head strong');
+    const note = model.querySelector('.kimono-model__head small');
+    if (title?.textContent?.trim() === 'Espaço reservado') title.textContent = 'Kimono Fusion';
+    if (note?.textContent?.includes('próximo conjunto')) note.textContent = '3 imagens do mesmo produto';
+  };
+
   document.querySelectorAll('.kimono-slot__img').forEach((img) => {
     const slot = img.closest('.kimono-slot');
-    const markMissing = () => slot && slot.classList.add('is-missing');
-    const markReady = () => slot && slot.classList.remove('is-missing');
+    const model = img.closest('.kimono-model');
+    const markMissing = () => {
+      slot?.classList.add('is-missing');
+      refreshKimonoModel(model);
+    };
+    const markReady = () => {
+      slot?.classList.remove('is-missing');
+      refreshKimonoModel(model);
+    };
     img.addEventListener('error', markMissing);
     img.addEventListener('load', markReady);
     if (img.complete) {
@@ -102,8 +122,11 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
     }
   });
 
+  document.querySelectorAll('.kimono-model').forEach(refreshKimonoModel);
+
   const lightbox = document.getElementById('project-media-lightbox');
   const lightboxImage = lightbox?.querySelector('.media-lightbox__stage img');
+  const lightboxStage = lightbox?.querySelector('.media-lightbox__stage');
   const closeButton = lightbox?.querySelector('.media-lightbox__close');
 
   const closeLightbox = () => {
@@ -138,6 +161,9 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
   closeButton?.addEventListener('click', closeLightbox);
   lightbox?.addEventListener('click', (event) => {
     if (event.target === lightbox) closeLightbox();
+  });
+  lightboxStage?.addEventListener('click', (event) => {
+    if (event.target === lightboxStage) closeLightbox();
   });
   lightbox?.addEventListener('close', () => {
     document.body.classList.remove('lightbox-open');
