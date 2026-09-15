@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import NoteCard from '../components/NoteCard.astro';
+import '../styles/home-marquee.css';
 
 const base = import.meta.env.BASE_URL;
 const projects = (await getCollection('projects'))
@@ -39,7 +40,18 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
   </section>
 
   <section class="signal-strip" aria-hidden="true">
-    <div>NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO</div>
+    <div class="signal-strip__track">
+      <span class="signal-strip__copy">
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+      </span>
+      <span class="signal-strip__copy">
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+        NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO <i>+</i>
+      </span>
+    </div>
   </section>
 
   <section class="system-section section-pad">
