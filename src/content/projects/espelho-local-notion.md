@@ -3,7 +3,7 @@ title: Espelho Local do Notion
 summary: Sistema local e versionado para espelhar conteúdo do Notion em Markdown e CSV sem depender da interface para preservar o acervo.
 category: Sistema interno
 status: Validado
- year: "2026"
+year: "2026"
 role: Especificação, arquitetura e validação operacional
 proof: Execução validada com centenas de páginas, dezenas de bases, idempotência e zero erro no checkpoint final.
 featured: false

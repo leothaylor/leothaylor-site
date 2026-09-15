@@ -2,7 +2,6 @@
 title: Da Teia V1 à V2: quando reescrever é melhor que continuar remendando
 date: 2026-09-15
 category: Produto
-aorder: 3
 order: 3
 summary: A primeira versão provou o comportamento. A segunda precisou abandonar parte da implementação para preservar melhor a ideia.
 ---
