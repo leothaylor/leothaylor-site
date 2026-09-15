@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install Playwright
         run: |
@@ -29,7 +29,7 @@ jobs:
       - name: Capture first fold
         run: |
           mkdir -p public/project-media
-          cat > /tmp/capture.mjs <<'EOF'
+          cat > .capture-client-sites.mjs <<'EOF'
           import { chromium } from 'playwright';
 
           const jobs = [
@@ -57,7 +57,8 @@ jobs:
           }
           await browser.close();
           EOF
-          node /tmp/capture.mjs
+          node .capture-client-sites.mjs
+          rm .capture-client-sites.mjs
 
       - name: Point project cards to homepage screenshots
         run: |
