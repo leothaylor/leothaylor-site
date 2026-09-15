@@ -1,31 +1,51 @@
 ---
 title: Cristiano Matos
-summary: Site institucional de psicologia online construído para credibilidade profissional e geração de contatos diretos.
+summary: "Site para atendimento psicológico online, com foco em apresentação profissional, explicação do atendimento e contato direto."
 category: Projeto para cliente
-status: Publicado / revisão final
+status: Publicado
 year: "2026"
 role: Arquitetura, copy, direção visual, implementação e infraestrutura
-proof: Site aprovado pelo cliente, domínio próprio conectado, DNS validado e HTTPS ativo.
+proof: "Site aprovado, domínio próprio conectado, DNS configurado, HTTPS ativo e versão pública no ar."
 featured: true
 order: 6
 liveUrl: https://cristianomatospsicologo.com.br/
 repoUrl: https://github.com/leothaylor/cristiano-matos-site
 tags: [site institucional, copy, domínio, DNS, GitHub Pages, psicologia]
+accent: "#C3A46D"
+accent2: "#F5F0E7"
+surface: "#0D1A2B"
+ink: "#FFFFFF"
+media:
+  - url: https://raw.githubusercontent.com/leothaylor/cristiano-matos-site/main/assets/cristiano-hero.jpg
+    alt: Foto usada no hero do site de Cristiano Matos
+    caption: Hero da versão pública.
+    fit: cover
+  - url: https://raw.githubusercontent.com/leothaylor/cristiano-matos-site/main/assets/cristiano-sobre.jpg
+    alt: Foto usada na seção sobre do site de Cristiano Matos
+    caption: Material usado na apresentação profissional.
+    fit: cover
+metrics:
+  - value: "100%"
+    label: atendimento online
+  - value: "16+"
+    label: faixa de público
+  - value: "HTTPS"
+    label: domínio protegido
+  - value: "DNS"
+    label: configuração concluída
 ---
 ## Objetivo
 
-Construir uma presença profissional própria para atendimento psicológico online, com foco em credibilidade e contato — sem transformar a V1 em portal, blog ou funil complexo.
+O Cristiano precisava de um endereço próprio para apresentar o atendimento psicológico online e facilitar o agendamento. A V1 foi planejada para resolver isso com uma página direta e fácil de navegar.
 
-## Arquitetura
+## Estrutura da página
 
-A jornada foi estruturada para colocar identificação antes de currículo: dificuldades → abordagens → demandas → autoridade → funcionamento do atendimento → FAQ → contato.
+A sequência prioriza identificação, abordagens, demandas atendidas, formação, funcionamento das consultas, perguntas frequentes e contato.
 
-A apresentação foi ajustada para primeira pessoa, para que o site soasse como o próprio Cristiano falando em vez de uma instituição descrevendo o profissional.
+A copy passou para primeira pessoa porque combinava melhor com o modo como o Cristiano queria se apresentar. O visitante lê a página como uma conversa com o profissional, sem uma voz institucional artificial.
 
-## Infraestrutura
+## Visual e infraestrutura
 
-O projeto avançou até domínio próprio, DNS, HTTPS e GitHub Pages. O cliente aprovou a estrutura e a identidade; a fase atual está restrita a refinamentos finais de conteúdo/imagem.
+A identidade usa azul-marinho, creme e dourado, com tipografia serifada nos títulos. O projeto também incluiu domínio no Registro.br, configuração de DNS, GitHub Pages e HTTPS.
 
-## O que esse case representa
-
-Uma entrega de escopo controlado: **marca pessoal profissional + aquisição**, sem adicionar complexidade que a V1 não precisava.
+A página está publicada em `cristianomatospsicologo.com.br`.

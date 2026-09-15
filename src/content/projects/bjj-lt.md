@@ -1,23 +1,40 @@
 ---
-title: BJJ LT — aulas e método
-summary: "Minha frente de jiu-jitsu: ensino presencial, método estruturado, registros de aula e uma Área do Aluno conectada ao trabalho no tatame."
+title: "BJJ LT: aulas e método"
+summary: "Aulas presenciais de jiu-jitsu com currículo, registros do que aconteceu no tatame e uma Área do Aluno ligada ao conteúdo ensinado."
 category: Jiu-Jitsu
 status: Operado
 year: "2026"
 role: Professor, desenho pedagógico, conteúdo e sistema digital
-proof: Aulas recorrentes, currículo registrado e site público oficial em uso para captação.
+proof: "Aulas recorrentes três vezes por semana, currículo registrado e site público usado para captação."
 featured: false
 order: 7
 liveUrl: https://leothaylor.github.io/aulas-jiu-jitsu/
 repoUrl: https://github.com/leothaylor/aulas-jiu-jitsu
 tags: [jiu-jitsu, ensino, currículo, site, dados longitudinais]
+accent: "#D5D0BF"
+accent2: "#A2AD87"
+surface: "#171A18"
+ink: "#F3F1E8"
+metrics:
+  - value: "3x"
+    label: aulas por semana
+  - value: "4m"
+    label: rounds de segunda
+  - value: "5m"
+    label: rounds de quarta
+  - value: "7m"
+    label: rounds de sexta
 ---
-## Ensino como sistema vivo
+## Como organizo o ensino
 
-O trabalho no BJJ conecta aula planejada e evidência observada no tatame. Erros recorrentes viram correções, resistência progressiva, treino específico e calibração da aula seguinte.
+Eu registro o plano da aula e também o que realmente aconteceu no treino. Erros recorrentes dos alunos voltam para o planejamento seguinte como correção, resistência progressiva ou treino específico.
 
-O método organiza a progressão em reconhecer, sobreviver, estabilizar, escapar, controlar, transicionar, atacar e encadear.
+O currículo usa uma sequência de oito ações: reconhecer, sobreviver, estabilizar, escapar, controlar, transicionar, atacar e encadear.
+
+## Frequência e progressão
+
+As aulas acontecem segunda, quarta e sexta. Os rounds também mudam ao longo da semana, com 4, 5 e 7 minutos. Isso ajuda a separar aquisição, tomada de decisão e integração sob fadiga.
 
 ## Camada digital
 
-O site público apresenta as aulas e direciona novos alunos. A Área do Aluno funciona como extensão do ensino. Os registros preservam o que foi planejado, o que realmente aconteceu e como os alunos evoluem ao longo do tempo.
+O site público apresenta as aulas e recebe novos alunos. A Área do Aluno guarda materiais ligados ao que foi ensinado. Os registros preservam aula planejada, aula executada, presença e pontos de dificuldade para acompanhar evolução ao longo do tempo.

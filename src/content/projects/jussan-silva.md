@@ -1,27 +1,53 @@
 ---
 title: Jussan Silva
-summary: Reorganização da presença digital de um personal trainer, conectando oferta, site, posicionamento e caminho até o WhatsApp.
+summary: "Revisão da presença digital de um personal trainer, com oferta, site, posicionamento e caminho direto para o WhatsApp."
 category: Projeto para cliente
-status: Validado / publicado
+status: Publicado e validado
 year: "2026"
 role: Estratégia digital, revisão de oferta, site e direção de conteúdo
-proof: Site final validado, publicado em domínio próprio e integrado à operação de consultoria online.
+proof: "Site final aprovado, publicado em domínio próprio e integrado à consultoria online."
 featured: true
 order: 5
 liveUrl: https://coachjussansilva.com.br/
 repoUrl: https://github.com/leothaylor/JussanSilvaPersonalV2
 tags: [site, conversão, posicionamento, personal trainer, conteúdo]
+accent: "#C28A49"
+accent2: "#235347"
+surface: "#122019"
+ink: "#F2EDDF"
+media:
+  - url: https://raw.githubusercontent.com/leothaylor/JussanSilvaPersonalV2/main/assets/autonomia.jpg
+    alt: Material visual do site de Jussan Silva
+    caption: Um dos materiais visuais usados na versão publicada.
+    fit: cover
+  - url: https://raw.githubusercontent.com/leothaylor/JussanSilvaPersonalV2/main/assets/capacidade.jpg
+    alt: Segundo material visual do site de Jussan Silva
+    caption: Direção visual para capacidade física e autonomia.
+    fit: cover
+metrics:
+  - value: "WEB"
+    label: domínio próprio
+  - value: "MOBILE"
+    label: responsivo
+  - value: "CTA"
+    label: conversa no WhatsApp
+  - value: "2"
+    label: eixos iniciais de oferta
 ---
 ## Ponto de partida
 
-Jussan já tinha experiência profissional, clientes e uma primeira versão de site criada por ele. O trabalho não começou apagando tudo: começou entendendo o que já funcionava e onde havia atrito na comunicação.
+Jussan já tinha clientes, formação e uma primeira versão do site feita por ele. Eu parti desse material para reorganizar a mensagem e melhorar a passagem entre Instagram, site e conversa comercial.
 
-## Direção
+## Oferta e posicionamento
 
-A presença digital foi reorganizada em torno da consultoria online, com dois eixos iniciais — qualidade de vida e performance esportiva — sem fechar o nicho cedo demais. A regra era observar quem realmente responde e ajustar a partir do uso.
+A consultoria online foi colocada no centro. A comunicação começou com dois eixos: qualidade de vida e performance esportiva. A ideia era observar quem respondia melhor antes de estreitar o público.
 
-O site final passou por copy, hierarquia, mídia real, CTAs, responsividade e percepção de oferta. O caminho comercial principal termina em conversa no WhatsApp.
+## Site
 
-## O que esse case representa
+A versão final recebeu nova hierarquia, copy, tipografia, cores, imagens, CTAs e ajustes de responsividade. O caminho principal leva à conversa no WhatsApp.
 
-Um projeto de presença digital para profissional de serviço em que **site não é peça isolada**: ele precisa conversar com posicionamento, conteúdo, oferta e aquisição.
+O site foi publicado em `coachjussansilva.com.br` e ficou fechado para novas mudanças até aparecer feedback, dado de uso ou uma necessidade específica.
+
+## Continuidade
+
+O projeto segue como apoio digital pontual. Jussan grava e publica a maior parte do conteúdo; eu entro em estratégia, roteiro, oferta e ajustes específicos quando há motivo para mexer.

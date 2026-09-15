@@ -11,11 +11,12 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 const { data } = project;
 const base = import.meta.env.BASE_URL;
+const style = `--project-accent:${data.accent};--project-accent-2:${data.accent2};--project-surface:${data.surface};--project-ink:${data.ink};`;
 ---
-<BaseLayout title={`${data.title} — Leo Thaylor`} description={data.summary}>
-  <article class="case-page section-pad">
+<BaseLayout title={`${data.title} · Leo Thaylor`} description={data.summary}>
+  <article class="case-page section-pad" style={style}>
     <a class="back-link" href={`${base}projetos/`}>← Todos os projetos</a>
-    <header class="case-hero">
+    <header class="case-hero reveal">
       <div class="case-hero__meta">
         <span class="eyebrow">{data.category}</span>
         <span>{data.year}</span>
@@ -23,9 +24,24 @@ const base = import.meta.env.BASE_URL;
       </div>
       <h1>{data.title}</h1>
       <p>{data.summary}</p>
+
+      {data.media.length > 0 && (
+        <div class={`case-cover case-cover--${data.media[0].fit}`}>
+          <img src={data.media[0].url} alt={data.media[0].alt} decoding="async" />
+          <div class="case-cover__wash"></div>
+          {data.media[0].caption && <small>{data.media[0].caption}</small>}
+        </div>
+      )}
+
+      {data.metrics.length > 0 && (
+        <div class="case-metrics">
+          {data.metrics.map((metric) => <div><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
+        </div>
+      )}
+
       <div class="case-facts">
         <div><small>MEU PAPEL</small><strong>{data.role}</strong></div>
-        <div><small>EVIDÊNCIA</small><strong>{data.proof}</strong></div>
+        <div><small>ESTADO / EVIDÊNCIA</small><strong>{data.proof}</strong></div>
       </div>
       {(data.liveUrl || data.repoUrl) && (
         <div class="case-actions">
@@ -34,9 +50,32 @@ const base = import.meta.env.BASE_URL;
         </div>
       )}
     </header>
-    <div class="prose case-content">
-      <Content />
+
+    <div class="case-body-grid">
+      <aside class="case-index reveal">
+        <span>CASE</span>
+        <strong>{String(data.order).padStart(2, '0')}</strong>
+        <p>{data.category}<br />{data.status}</p>
+      </aside>
+      <div class="prose case-content reveal">
+        <Content />
+      </div>
     </div>
+
+    {data.media.length > 1 && (
+      <section class="case-gallery reveal" aria-label="Galeria do projeto">
+        <div class="case-gallery__head"><span class="eyebrow">REGISTRO VISUAL</span><h2>Telas, materiais e resultados.</h2></div>
+        <div class="case-gallery__grid">
+          {data.media.slice(1).map((item) => (
+            <figure class:list={{ 'is-contain': item.fit === 'contain' }}>
+              <img src={item.url} alt={item.alt} loading="lazy" decoding="async" />
+              {item.caption && <figcaption>{item.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </section>
+    )}
+
     {data.tags.length > 0 && <div class="tag-list">{data.tags.map((tag) => <span>{tag}</span>)}</div>}
   </article>
 </BaseLayout>

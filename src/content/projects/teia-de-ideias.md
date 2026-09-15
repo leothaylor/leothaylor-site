@@ -1,33 +1,51 @@
 ---
 title: Teia de Ideias V2
-summary: Ambiente visual para conectar ideias, ações, decisões, experimentos e resultados sem transformar tudo em uma ferramenta corporativa.
+summary: "Canvas visual para ligar ideias, ações, decisões, experimentos e resultados em um fluxo que continua editável."
 category: Produto próprio
-status: Construído / validado
-year: "2025–2026"
+status: Publicado e validado
+year: "2025 a 2026"
 role: Conceito, produto, arquitetura e validação
-proof: V2 publicada e validada após correções de interação e exportação em uso real.
+proof: "V2 publicada depois de uma reescrita em React e TypeScript, com correções feitas a partir de uso e exportação."
 featured: true
 order: 2
 liveUrl: https://leothaylor.github.io/9ideia-v2/
 repoUrl: https://github.com/leothaylor/9ideia-v2
 tags: [React, TypeScript, React Flow, localStorage, produto, visual thinking]
+accent: "#9A8CFF"
+accent2: "#63D4FF"
+surface: "#17182B"
+ink: "#F7F5FF"
+media:
+  - url: https://raw.githubusercontent.com/leothaylor/9ideia-v2/main/public/og.png
+    alt: Interface visual da Teia de Ideias V2
+    caption: Visão geral da Teia de Ideias V2.
+    fit: cover
+metrics:
+  - value: "V2"
+    label: reconstrução atual
+  - value: "JSON"
+    label: backup exportável
+  - value: "PNG"
+    label: exportação visual
+  - value: "AUTO"
+    label: salvamento local
 ---
-## De mapa mental para mapa de execução
+## O que eu queria enxergar
 
-A primeira versão era uma ferramenta simples para ligar nós em um canvas. O uso real mostrou outra coisa: eu estava usando aquilo para visualizar como uma ideia virava ação, decisão, correção e resultado.
+A V1 nasceu como um canvas para criar nós e conexões. Com o uso, comecei a usar a tela para acompanhar outra coisa: como uma ideia passava por ação, decisão, correção e resultado.
 
-A V2 nasceu dessa observação, não de uma lista abstrata de features.
+Isso virou o foco da V2.
 
-## V2
+## Reconstrução
 
-A reconstrução trouxe múltiplas teias, nós semânticos, status, tags, descrição, links, conexões direcionais, busca, autosave, backup em JSON, minimapa e exportação PNG.
+Eu troquei o motor manual da primeira versão por React, TypeScript e React Flow. A nova versão trouxe múltiplas teias, tipos de nó, status, tags, descrições, links, conexões direcionais, busca, autosave, backup em JSON, minimapa e exportação PNG.
 
-Em vez de continuar ampliando um motor Canvas manual, a V2 foi refeita com React, TypeScript e React Flow.
+## Um bug que apareceu usando a ferramenta
 
-## Teste que mudou o produto
+A primeira exportação PNG funcionava. Depois de mover um nó e exportar novamente, a segunda imagem podia sair errada. O fluxo de teste mostrou que a implementação não acompanhava a sequência normal de uso.
 
-A primeira exportação PNG funcionava, mas uma segunda exportação depois de mover um nó podia falhar. O caso real revelou que a solução anterior não reproduzia o comportamento do usuário. A exportação passou a manter uma imagem preparada em memória e invalidá-la quando o grafo muda.
+A correção passou a manter uma imagem preparada em memória e invalidá-la sempre que o grafo muda. Esse ajuste resolveu a segunda exportação sem exigir que o usuário recarregasse a página.
 
-## O que esse case representa
+## Histórico preservado
 
-Um ciclo completo de **uso → diagnóstico → reescrita → teste → bug real → correção**, mantendo a V1 preservada como histórico em vez de reescrevê-la retroativamente.
+A V1 continua registrada. Eu prefiro manter a versão antiga como parte do histórico e deixar a V2 mostrar claramente o que mudou.

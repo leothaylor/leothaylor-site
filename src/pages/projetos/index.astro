@@ -5,18 +5,18 @@ import ProjectCard from '../../components/ProjectCard.astro';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
-<BaseLayout title="Projetos — Leo Thaylor" description="Projetos, produtos, sites, sistemas, operações e experimentos construídos por Leo Thaylor.">
-  <section class="page-hero section-pad page-hero--compact">
+<BaseLayout title="Projetos · Leo Thaylor" description="Sites, produtos, automações e sistemas construídos ou dirigidos por Leo Thaylor.">
+  <section class="page-hero section-pad page-hero--compact reveal">
     <span class="eyebrow">PROJETOS</span>
-    <h1>Prova antes<br /><span>de rótulo.</span></h1>
-    <p>Não é uma lista de ferramentas que eu sei usar. São coisas construídas, operadas, entregues ou investigadas — cada uma marcada pelo estado real em que se encontra.</p>
+    <h1>Coisas que eu construí, dirigi ou coloquei para funcionar.</h1>
+    <p>Cada case mostra o escopo, meu papel, o estado atual e alguma evidência concreta. Quando existe uma versão pública, você pode abrir o projeto ou consultar o repositório.</p>
   </section>
 
   <section class="section-pad section-pad--topless">
-    <div class="taxonomy-line">
-      <span>CONSTRUÍDO / VALIDADO</span><span>OPERADO / ENTREGUE</span><span>EM DESENVOLVIMENTO</span><span>LAB / INTERNO</span>
+    <div class="taxonomy-line reveal">
+      <span>PUBLICADO</span><span>OPERADO</span><span>ENTREGUE</span><span>SISTEMA INTERNO</span><span>LABORATÓRIO</span>
     </div>
-    <div class="project-grid">
+    <div class="project-grid project-grid--archive">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
   </section>

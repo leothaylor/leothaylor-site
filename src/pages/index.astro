@@ -11,68 +11,86 @@ const projects = (await getCollection('projects'))
 const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 ---
 <BaseLayout>
-  <section class="hero section-pad">
-    <div class="hero__kicker eyebrow">BASE PRÓPRIA · RIO DE JANEIRO</div>
-    <h1>Eu construo, testo<br /><span>e documento.</span></h1>
-    <p class="hero__lead">Sou Leo Thaylor. Professor de jiu-jitsu e construtor de projetos digitais. Este é meu endereço na internet: o que já existe, o que estou testando e o que aprendo no processo.</p>
-    <div class="hero__routes" aria-label="Caminhos principais">
-      <a class="route-card route-card--primary" href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj">
-        <span class="route-card__index">01</span>
-        <strong>Treinar Jiu-Jitsu</strong>
-        <small>Aulas presenciais, método e Área do Aluno.</small>
-        <b>↗</b>
-      </a>
-      <a class="route-card" href={`${base}projetos/`} data-track="click_project">
-        <span class="route-card__index">02</span>
-        <strong>Ver o que construo</strong>
-        <small>Produtos, sites, sistemas, operações e laboratório.</small>
-        <b>→</b>
-      </a>
-      <a class="route-card" href={`${base}notas/`} data-track="click_note">
-        <span class="route-card__index">03</span>
-        <strong>Ler minhas notas</strong>
-        <small>Decisões, experimentos, aprendizados e arquivo.</small>
-        <b>→</b>
-      </a>
+  <section class="hero-v2 section-pad">
+    <div class="hero-v2__copy reveal">
+      <span class="eyebrow">LEO THAYLOR · RIO DE JANEIRO</span>
+      <h1>Eu construo ferramentas para problemas que já encontrei trabalhando.</h1>
+      <p>Hoje isso inclui um radar vacinal que funciona offline, uma ferramenta visual para ligar ideias, sites de clientes, automações locais de vídeo e um sistema próprio de memória no Notion com backup em Markdown, CSV e Git.</p>
+      <div class="hero-v2__actions">
+        <a class="button" href={`${base}projetos/`} data-track="click_project">Ver projetos</a>
+        <a class="button button--ghost" href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj">Treinar Jiu-Jitsu ↗</a>
+      </div>
+    </div>
+
+    <aside class="hero-board reveal" aria-label="Projetos e sistemas em uso">
+      <div class="hero-board__head"><span>AGORA</span><b>4 FRENTES EM USO</b></div>
+      <div class="hero-board__item"><span>01</span><div><strong>Radar Vacinal ACS</strong><small>PWA · offline · dados locais</small></div><i>PUBLICADO</i></div>
+      <div class="hero-board__item"><span>02</span><div><strong>Teia de Ideias V2</strong><small>React · TypeScript · grafo visual</small></div><i>PUBLICADO</i></div>
+      <div class="hero-board__item"><span>03</span><div><strong>OS Leo</strong><small>Notion · GPT · histórico de decisões</small></div><i>ATIVO</i></div>
+      <div class="hero-board__item"><span>04</span><div><strong>BJJ LT</strong><small>aulas · registros · Área do Aluno</small></div><i>ATIVO</i></div>
+      <div class="hero-board__signal"><span></span> última revisão: setembro de 2026</div>
+    </aside>
+
+    <div class="hero-routes reveal" aria-label="Caminhos principais">
+      <a href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj"><span>01</span><strong>Jiu-Jitsu</strong><small>Aulas, método e Área do Aluno.</small><b>↗</b></a>
+      <a href={`${base}projetos/`} data-track="click_project"><span>02</span><strong>Projetos</strong><small>Sites, produtos, sistemas e automações.</small><b>→</b></a>
+      <a href={`${base}notas/`} data-track="click_note"><span>03</span><strong>Notas</strong><small>Decisões, testes, erros e aprendizados.</small><b>→</b></a>
     </div>
   </section>
 
-  <section class="manifesto-strip" aria-label="Princípio de trabalho">
-    <div class="marquee-copy">PROBLEMA REAL <i>→</i> ORGANIZAR <i>→</i> CONSTRUIR <i>→</i> TESTAR <i>→</i> REGISTRAR <i>→</i> CORRIGIR</div>
+  <section class="signal-strip" aria-hidden="true">
+    <div>NOTION <i>+</i> GPT <i>+</i> GIT <i>+</i> PYTHON <i>+</i> WEB <i>+</i> BJJ <i>+</i> AUTOMAÇÃO <i>+</i> CONTEÚDO</div>
   </section>
 
-  <section class="section-pad" id="destaques">
-    <div class="section-head">
+  <section class="system-section section-pad">
+    <div class="system-intro reveal">
+      <span class="eyebrow">SISTEMA PESSOAL</span>
+      <h2>Como eu não perco o fio entre um projeto e outro.</h2>
+      <p>O Notion é meu painel central, mas o fluxo começa antes dele e termina com uma cópia local versionada. Assim eu consigo retomar decisões, entender por que algo mudou e continuar um projeto meses depois sem reconstruir toda a história.</p>
+    </div>
+
+    <div class="system-flow reveal" aria-label="Fluxo de captura, organização e backup">
+      <div class="flow-step"><span>CAPTURA</span><strong>WhatsApp</strong><p>Ideias e observações entram por um canal rápido, sem exigir organização na hora.</p></div>
+      <div class="flow-arrow"><i></i></div>
+      <div class="flow-step"><span>TRIAGEM</span><strong>GPT</strong><p>O contexto é organizado e só o que merece continuidade vira registro permanente.</p></div>
+      <div class="flow-arrow"><i></i></div>
+      <div class="flow-step flow-step--main"><span>MEMÓRIA</span><strong>OS Leo no Notion</strong><p>Projetos, tarefas, ideias, conteúdo, estudos, decisões, experimentos e registros de BJJ ficam separados por função.</p></div>
+      <div class="flow-arrow"><i></i></div>
+      <div class="flow-step"><span>BACKUP</span><strong>Espelho local + Git</strong><p>Python lê a API do Notion e gera Markdown e CSV em uma pasta local versionada.</p></div>
+    </div>
+
+    <div class="system-metrics reveal">
+      <div><strong>414</strong><span>páginas espelhadas</span></div>
+      <div><strong>33</strong><span>bases exportadas</span></div>
+      <div><strong>512</strong><span>arquivos versionados</span></div>
+      <div><strong>0</strong><span>erros no checkpoint</span></div>
+    </div>
+    <a class="system-link reveal" href={`${base}projetos/espelho-local-notion/`}>Ver como o espelho do Notion funciona →</a>
+  </section>
+
+  <section class="section-pad featured-section" id="destaques">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">PROJETOS EM DESTAQUE</span>
-        <h2>Coisas que já saíram<br />da ideia.</h2>
+        <h2>Seis projetos com material para conferir.</h2>
       </div>
-      <a class="section-link" href={`${base}projetos/`}>Ver todos os projetos →</a>
+      <a class="section-link" href={`${base}projetos/`}>Ver todos →</a>
     </div>
-    <div class="project-grid">
-      {projects.map((project) => <ProjectCard project={project} />)}
+    <div class="project-showcase">
+      {projects.map((project) => <ProjectCard project={project} mode="feature" />)}
     </div>
   </section>
 
   <section class="section-pad notes-section">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
-        <span class="eyebrow">NOTAS</span>
-        <h2>O raciocínio também<br />faz parte do trabalho.</h2>
+        <span class="eyebrow">NOTAS DE TRABALHO</span>
+        <h2>O que mudou, por quê e o que eu aprendi.</h2>
       </div>
       <a class="section-link" href={`${base}notas/`}>Todas as notas →</a>
     </div>
     <div class="notes-grid">
       {notes.map((note) => <NoteCard note={note} />)}
-    </div>
-  </section>
-
-  <section class="section-pad pattern-section">
-    <div class="pattern-section__number">*</div>
-    <div>
-      <span class="eyebrow">O PADRÃO</span>
-      <h2>Áreas diferentes.<br />Um modo parecido de trabalhar.</h2>
-      <p>Normalmente começo por um problema concreto, organizo o que está acontecendo, construo uma solução possível e testo no mundo real. Hoje isso aparece em web, automação, IA, produto, conteúdo e jiu-jitsu.</p>
     </div>
   </section>
 </BaseLayout>

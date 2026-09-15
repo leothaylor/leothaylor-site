@@ -1,32 +1,28 @@
 ---
-title: "Da Teia V1 à V2: quando reescrever é melhor que continuar remendando"
+title: "Da Teia V1 à V2: quando eu parei de remendar e reescrevi"
 date: 2026-09-15
 category: Produto
 order: 3
-summary: A primeira versão provou o comportamento. A segunda precisou abandonar parte da implementação para preservar melhor a ideia.
+summary: "O uso da primeira Teia mostrou que o produto precisava de outra estrutura. A V2 foi refeita em React, TypeScript e React Flow."
 ---
-A primeira Teia de Ideias funcionava.
+A primeira Teia de Ideias funcionava. Eu conseguia criar nós, mover elementos e ligar uma coisa à outra.
 
-Isso não significava que deveria continuar crescendo sobre a mesma base.
+Depois de usar a ferramenta por algum tempo, ficou claro que eu queria representar mais do que um mapa mental. Eu estava tentando acompanhar relações entre ideia, ação, decisão, experimento, correção e resultado.
 
-Ela tinha canvas, nós, conexões, zoom, pan, exportação e persistência local. O problema apareceu quando o uso começou a pedir mais semântica, múltiplas teias, busca, nós dinâmicos, handles, direção nas relações e uma interface menos carregada.
+## O que mudou na V2
 
-## A pergunta mudou
+A reconstrução trouxe tipos de nó, múltiplas teias, status, tags, descrição, links, conexões direcionais, busca, autosave, backup em JSON, minimapa e exportação PNG.
 
-Não era mais “como adiciono mais recursos à V1?”.
+Também troquei o motor manual do canvas por React Flow.
 
-Virou: **qual parte da V1 é produto e qual parte é apenas implementação?**
+## O bug da segunda exportação
 
-O produto era a ideia de visualizar raciocínio e execução: ideias, ações, decisões, experimentos e resultados conectados.
+A exportação PNG parecia resolvida porque a primeira tentativa funcionava.
 
-O motor Canvas feito à mão não precisava ser preservado como dogma.
+O problema aparecia numa sequência específica: exportar, mover um nó e exportar de novo. A segunda imagem podia falhar.
 
-## Reescrever sem apagar o passado
+A solução passou a manter uma imagem preparada em memória e invalidá-la quando o grafo muda. Assim a próxima exportação é reconstruída depois de qualquer alteração.
 
-A V1 foi congelada como histórico. A V2 nasceu em outro repositório usando React, TypeScript e React Flow.
+## Por que mantive a V1
 
-Isso permitiu melhorar o modelo sem fingir que a primeira versão nunca existiu.
-
-Também deixou um critério que quero reutilizar: quando a implementação começa a consumir energia para defender limitações que não fazem parte do valor central, **reescrever pode ser menos desperdício do que remendar**.
-
-Mas só depois que a versão anterior já ensinou alguma coisa real.
+A primeira versão continua preservada porque mostra o caminho que levou à reescrita. Isso ajuda a lembrar quais decisões vieram do uso e quais só apareceram depois.

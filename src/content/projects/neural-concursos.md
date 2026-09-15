@@ -1,28 +1,54 @@
 ---
 title: Neural Concursos
-summary: Direção estratégica e sistema digital para um negócio de preparação para concursos, do posicionamento ao handoff da operação.
+summary: "Projeto de posicionamento, produto, site, funil e conteúdo para um negócio de preparação para concursos."
 category: Projeto para cliente
-status: Concluído / entregue
+status: Concluído e entregue
 year: "2026"
 role: Estratégia, posicionamento, produto, copy, direção visual e arquitetura digital
-proof: Produto/site publicados, sistema editorial entregue e operação transferida ao cliente.
+proof: "Site e produto publicados, sistema editorial entregue e repositório transferido ao cliente ao final do trabalho."
 featured: true
 order: 4
 liveUrl: https://neuralconcursos.com.br/
 tags: [estratégia, produto digital, marca, conteúdo, funil, handoff]
+accent: "#D72B34"
+accent2: "#F3F0E8"
+surface: "#121211"
+ink: "#FFFDF8"
+media:
+  - url: https://raw.githubusercontent.com/eduardodo939/sistema-pos-edital/main/evidence/v2/13-public-desktop.png
+    alt: Página pública da Neural Concursos em desktop
+    caption: Página pública depois da segunda rodada de refinamento.
+    fit: cover
+  - url: https://raw.githubusercontent.com/eduardodo939/sistema-pos-edital/main/evidence/v2/01-hero-desktop.png
+    alt: Hero do Sistema Pós-Edital
+    caption: Tela de validação do produto digital.
+    fit: cover
+  - url: https://raw.githubusercontent.com/eduardodo939/sistema-pos-edital/main/public/capa-sistema-pos-edital.webp
+    alt: Capa do Sistema Pós-Edital
+    caption: Identidade do produto principal.
+    fit: contain
+metrics:
+  - value: "168"
+    label: publicações no benchmark
+  - value: "84"
+    label: Reels com views coletadas
+  - value: "8"
+    label: roteiros finais entregues
+  - value: "1"
+    label: handoff de repositório
 ---
 ## Escopo
 
-O trabalho com a Neural foi além de produzir peças para Instagram. A frente reuniu posicionamento, arquitetura de oferta, produto digital, isca, site, funil, sistema editorial, benchmark, analytics e divisão operacional.
+Meu trabalho com a Neural reuniu posicionamento, arquitetura de oferta, produto digital, isca, site, funil, sistema editorial, benchmark, analytics e organização do handoff.
 
-## Sistema editorial
+O produto principal foi o Sistema Pós-Edital. A operação também ganhou o Raio X Express como isca e uma biblioteca inicial de conteúdo para o Instagram.
 
-Uma rodada de benchmark consolidou referências públicas e serviu para definir um piloto editorial. O objetivo não era copiar concorrentes, mas identificar estruturas recorrentes e testar uma gramática própria: dúvidas concretas, erros corrigíveis, comparação com critérios e demonstração de decisões.
+## Benchmark editorial
 
-## Handoff
+A rodada final analisou 7 referências e preservou 168 publicações, com 84 contagens públicas de views em Reels. Os dados serviram para escolher estruturas de conteúdo para um piloto, especialmente dúvidas específicas, erros corrigíveis, comparação com critérios e demonstração de decisões.
 
-O projeto foi encerrado com pacote estratégico e biblioteca de roteiros. O repositório principal foi transferido ao cliente e o site continuou funcionando após a mudança de propriedade. A operação cotidiana deixou de depender de mim.
+## Entrega e saída da operação
 
-## O que esse case representa
+O pacote final incluiu 8 roteiros, direção editorial e documentação. O repositório do site foi transferido para a conta do cliente e testado depois da mudança de proprietário.
 
-É uma prova importante de trabalho sobre **um negócio de outra pessoa**: organizar a lógica, construir ativos, definir o sistema e depois reduzir dependência por meio de handoff.
+O encerramento foi parte do projeto: deixar os ativos organizados para o cliente continuar sem depender de mim para produzir cada peça.

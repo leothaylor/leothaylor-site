@@ -1,31 +1,53 @@
 ---
 title: Radar Vacinal ACS
-summary: Uma ferramenta gratuita para organizar acompanhamento vacinal no trabalho do ACS, construída como PWA local-first.
+summary: "Aplicativo instalável para o ACS acompanhar vacinação, busca ativa, histórico de doses e backups no próprio aparelho, inclusive offline."
 category: Produto próprio
-status: Construído / validado
+status: Publicado e validado
 year: "2026"
 role: Produto, arquitetura, implementação e evolução
-proof: PWA publicada, instalada e testada em Windows, iPhone e uso offline.
+proof: "PWA publicada, instalada e testada em Windows e iPhone, com persistência offline validada."
 featured: true
 order: 1
 liveUrl: https://leothaylor.github.io/radar-vacinal-premium/
 repoUrl: https://github.com/leothaylor/radar-vacinal-premium
 tags: [PWA, local-first, saúde, produto, UX, GitHub Pages]
+accent: "#43D6B3"
+accent2: "#5BA6E6"
+surface: "#092522"
+ink: "#F4FFFC"
+media:
+  - url: https://raw.githubusercontent.com/leothaylor/FerramentasparaACSTiktok/main/assets/banner-radar-vacinal.png
+    alt: Banner do Radar Vacinal ACS
+    caption: Material visual usado no ecossistema ROTINA ACS.
+    fit: cover
+  - url: https://raw.githubusercontent.com/leothaylor/radar-vacinal-premium/main/logo-radar-acs1.png
+    alt: Logo do Radar Vacinal ACS
+    caption: Identidade da ferramenta publicada.
+    fit: contain
+metrics:
+  - value: "2"
+    label: plataformas testadas
+  - value: "0"
+    label: backend obrigatório
+  - value: "LOCAL"
+    label: dados no aparelho
+  - value: "OFFLINE"
+    label: uso validado
 ---
-## O problema
+## De onde veio
 
-O acompanhamento vacinal no território pode virar uma combinação de memória, listas fragmentadas e conferências repetidas. O Radar nasceu para reduzir esse atrito sem criar uma infraestrutura clínica pesada.
+Eu trabalhei como ACS e conhecia o atrito de acompanhar situação vacinal com informação espalhada, conferências repetidas e listas paralelas. O Radar começou como uma tentativa de colocar esse acompanhamento em uma interface que pudesse ser usada no dia a dia.
 
-## O que foi construído
+## O que a versão atual faz
 
-A versão atual funciona como **PWA instalável**, com uso offline, dados mantidos no próprio dispositivo, busca e filtros, Busca Ativa, registro de doses, backup e restauração, exportação em PDF/JPG e compartilhamento pelo mecanismo nativo do aparelho.
+A ferramenta é uma PWA instalável. Ela mantém os dados no aparelho, funciona sem internet e reúne cadastro, busca, filtros, Busca Ativa, histórico de doses, backup, restauração, exportação em PDF/JPG e compartilhamento nativo.
 
-A base vacinal foi separada da interface e o motor de regras foi isolado para permitir revisão e testes. Migrações preservam histórico em vez de simplesmente apagar estados antigos quando não existe equivalência segura.
+A base vacinal fica separada da interface. O motor de regras também foi isolado, o que facilita revisão, testes e migrações sem apagar histórico por conveniência.
 
-## Decisão importante
+## Teste em dispositivo
 
-A hipótese de vender uma versão “Premium” foi abandonada. O custo de suporte, manutenção e responsabilidade não combinava com um produto barato. A ferramenta ampliada passou a ser gratuita e a funcionar como **utilidade + autoridade + aquisição indireta** dentro do ecossistema ROTINA ACS.
+A validação passou por instalação e uso em Windows e iPhone. O ponto principal era conferir persistência depois de fechar o navegador, instalar como aplicativo e usar sem conexão. Essa etapa encontrou problemas que não apareceriam olhando apenas o código.
 
-## O que esse case representa
+## Decisão de produto
 
-Não é só uma landing page. É um exemplo de produto surgindo de um problema operacional real, passando por regras, privacidade, modelo de negócio, instalação, uso offline e teste em dispositivo real.
+A primeira direção comercial previa uma versão paga. Depois de analisar suporte, manutenção, responsabilidade e preço, eu mudei a estratégia. A versão ampliada passou a ser gratuita e entrou no ROTINA ACS como ferramenta útil, demonstração de produto e porta de entrada para o restante do ecossistema.
