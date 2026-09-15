@@ -16,9 +16,9 @@ accent2: "#235347"
 surface: "#122019"
 ink: "#F2EDDF"
 media:
-  - url: https://raw.githubusercontent.com/leothaylor/JussanSilvaPersonalV2/main/assets/autonomia.jpg
-    alt: Material visual do site de Jussan Silva
-    caption: Um dos materiais visuais usados na versão publicada.
+  - url: https://raw.githubusercontent.com/leothaylor/leothaylor-site/main/public/project-media/jussan-site-home.png
+    alt: Print da primeira dobra do site publicado de Jussan Silva
+    caption: Primeira dobra da versão publicada em coachjussansilva.com.br.
     fit: cover
   - url: https://raw.githubusercontent.com/leothaylor/JussanSilvaPersonalV2/main/assets/capacidade.jpg
     alt: Segundo material visual do site de Jussan Silva

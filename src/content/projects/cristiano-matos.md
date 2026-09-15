@@ -16,9 +16,9 @@ accent2: "#F5F0E7"
 surface: "#0D1A2B"
 ink: "#FFFFFF"
 media:
-  - url: https://raw.githubusercontent.com/leothaylor/cristiano-matos-site/main/assets/cristiano-hero.jpg
-    alt: Foto usada no hero do site de Cristiano Matos
-    caption: Hero da versão pública.
+  - url: https://raw.githubusercontent.com/leothaylor/leothaylor-site/main/public/project-media/cristiano-site-home.png
+    alt: Print da primeira dobra do site publicado de Cristiano Matos
+    caption: Primeira dobra da versão publicada em cristianomatospsicologo.com.br.
     fit: cover
   - url: https://raw.githubusercontent.com/leothaylor/cristiano-matos-site/main/assets/cristiano-sobre.jpg
     alt: Foto usada na seção sobre do site de Cristiano Matos
