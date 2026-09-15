@@ -1,5 +1,5 @@
 ---
-title: Da Teia V1 à V2: quando reescrever é melhor que continuar remendando
+title: "Da Teia V1 à V2: quando reescrever é melhor que continuar remendando"
 date: 2026-09-15
 category: Produto
 order: 3

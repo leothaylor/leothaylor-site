@@ -1,6 +1,6 @@
 ---
 title: BJJ LT — aulas e método
-summary: Minha frente de jiu-jitsu: ensino presencial, método estruturado, registros de aula e uma Área do Aluno conectada ao trabalho no tatame.
+summary: "Minha frente de jiu-jitsu: ensino presencial, método estruturado, registros de aula e uma Área do Aluno conectada ao trabalho no tatame."
 category: Jiu-Jitsu
 status: Operado
 year: "2026"

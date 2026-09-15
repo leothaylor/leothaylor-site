@@ -3,8 +3,8 @@ title: Eu construía sistemas antes de saber chamar isso de sistema
 date: 2026-09-15
 category: Arquivo / trajetória
 order: 2
-summary: Ao recuperar conversas antigas, apareceu um padrão mais antigo que as ferramentas atuais: decompor atividades, registrar e tentar construir um processo melhor.
-provenance: Linha histórica reconstruída a partir de registros pessoais, principalmente Facebook Messenger; datas e níveis de confiança devem ser preservados caso a caso.
+summary: "Ao recuperar conversas antigas, apareceu um padrão mais antigo que as ferramentas atuais: decompor atividades, registrar e tentar construir um processo melhor."
+provenance: "Linha histórica reconstruída a partir de registros pessoais, principalmente Facebook Messenger; datas e níveis de confiança devem ser preservados caso a caso."
 ---
 Quando olho apenas para 2026, é fácil contar uma história centrada em IA, código, automação e dados.
 
