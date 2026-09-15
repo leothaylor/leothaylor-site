@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Página não encontrada — Leo Thaylor">
+  <section class="empty-state section-pad">
+    <span class="eyebrow">404</span>
+    <h1>Essa rota não existe.</h1>
+    <p>Volte para a base e siga por Projetos, Notas ou Jiu-Jitsu.</p>
+    <a class="button" href={base}>Voltar ao início →</a>
+  </section>
+</BaseLayout>

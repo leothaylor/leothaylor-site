@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Projetos — Leo Thaylor" description="Projetos, produtos, sites, sistemas, operações e experimentos construídos por Leo Thaylor.">
+  <section class="page-hero section-pad page-hero--compact">
+    <span class="eyebrow">PROJETOS</span>
+    <h1>Prova antes<br /><span>de rótulo.</span></h1>
+    <p>Não é uma lista de ferramentas que eu sei usar. São coisas construídas, operadas, entregues ou investigadas — cada uma marcada pelo estado real em que se encontra.</p>
+  </section>
+
+  <section class="section-pad section-pad--topless">
+    <div class="taxonomy-line">
+      <span>CONSTRUÍDO / VALIDADO</span><span>OPERADO / ENTREGUE</span><span>EM DESENVOLVIMENTO</span><span>LAB / INTERNO</span>
+    </div>
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

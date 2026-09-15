@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { data } = project;
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title={`${data.title} — Leo Thaylor`} description={data.summary}>
+  <article class="case-page section-pad">
+    <a class="back-link" href={`${base}projetos/`}>← Todos os projetos</a>
+    <header class="case-hero">
+      <div class="case-hero__meta">
+        <span class="eyebrow">{data.category}</span>
+        <span>{data.year}</span>
+        <span class="status-dot"><i></i>{data.status}</span>
+      </div>
+      <h1>{data.title}</h1>
+      <p>{data.summary}</p>
+      <div class="case-facts">
+        <div><small>MEU PAPEL</small><strong>{data.role}</strong></div>
+        <div><small>EVIDÊNCIA</small><strong>{data.proof}</strong></div>
+      </div>
+      {(data.liveUrl || data.repoUrl) && (
+        <div class="case-actions">
+          {data.liveUrl && <a class="button" href={data.liveUrl} target="_blank" rel="noopener noreferrer" data-track="click_project">Abrir projeto ↗</a>}
+          {data.repoUrl && <a class="button button--ghost" href={data.repoUrl} target="_blank" rel="noopener noreferrer" data-track="click_github">Ver GitHub ↗</a>}
+        </div>
+      )}
+    </header>
+    <div class="prose case-content">
+      <Content />
+    </div>
+    {data.tags.length > 0 && <div class="tag-list">{data.tags.map((tag) => <span>{tag}</span>)}</div>}
+  </article>
+</BaseLayout>

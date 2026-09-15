@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Leo Thaylor — projetos, sistemas e jiu-jitsu',
+  description = 'Base própria de Leo Thaylor na internet: projetos reais, ferramentas, sistemas, notas e jiu-jitsu.'
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
+const canonical = new URL(currentPath, Astro.site ?? Astro.url.origin);
+const gaId = import.meta.env.PUBLIC_GA_ID;
+
+const nav = [
+  { label: 'Projetos', href: `${base}projetos/`, key: '/projetos/' },
+  { label: 'Notas', href: `${base}notas/`, key: '/notas/' }
+];
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#1F2420" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+    {gaId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', gaId, { anonymize_ip: true });
+        </script>
+      </>
+    )}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href={base} aria-label="Leo Thaylor — início">
+          <span class="brand-mark">LT</span>
+          <span class="brand-name">LEO THAYLOR</span>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={currentPath.includes(item.key) ? 'page' : undefined}>{item.label}</a>
+          ))}
+          <a class="nav-bjj" href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj">Jiu-Jitsu ↗</a>
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <a class="brand brand--footer" href={base}>
+            <span class="brand-mark">LT</span>
+            <span class="brand-name">LEO THAYLOR</span>
+          </a>
+          <p>Projetos, sistemas, notas e jiu-jitsu. Uma base própria na internet.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://instagram.com/leothaylor" data-track="click_instagram">Instagram ↗</a>
+          <a href="https://github.com/leothaylor" data-track="click_github">GitHub ↗</a>
+          <a href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj">Jiu-Jitsu ↗</a>
+          <a href={`${base}rss.xml`}>RSS</a>
+        </div>
+        <p class="footer-meta">© {new Date().getFullYear()} Leo Thaylor.</p>
+      </footer>
+    </div>
+
+    <script is:inline>
+      document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[data-track]');
+        if (!link) return;
+        const eventName = link.dataset.track;
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, {
+            link_url: link.href,
+            element_label: link.textContent.trim()
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

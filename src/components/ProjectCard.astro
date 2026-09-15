@@ -1,0 +1,23 @@
+---
+const { project } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const { data } = project;
+---
+<article class="project-card">
+  <a class="project-card__link" href={`${base}projetos/${project.id}/`} data-track="click_project">
+    <div class="project-card__topline">
+      <span class="eyebrow">{data.category}</span>
+      <span class="status-dot"><i></i>{data.status}</span>
+    </div>
+    <div class="project-card__visual" aria-hidden="true">
+      <span>{String(data.order).padStart(2, '0')}</span>
+      <strong>{data.title.split(' ').slice(0, 2).join(' ')}</strong>
+    </div>
+    <div class="project-card__body">
+      <h3>{data.title}</h3>
+      <p>{data.summary}</p>
+      <div class="project-card__proof">{data.proof}</div>
+      <span class="text-link">Ver case <b>→</b></span>
+    </div>
+  </a>
+</article>

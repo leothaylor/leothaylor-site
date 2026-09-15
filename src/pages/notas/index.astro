@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NoteCard from '../../components/NoteCard.astro';
+
+const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Notas — Leo Thaylor" description="Notas de Leo Thaylor sobre projetos, sistemas, IA, jiu-jitsu, experimentos e decisões.">
+  <section class="page-hero section-pad page-hero--compact">
+    <span class="eyebrow">NOTAS</span>
+    <h1>Rede social distribui.<br /><span>Aqui fica o arquivo.</span></h1>
+    <p>Textos sobre projetos, decisões, erros, sistemas, pesquisa e coisas que valem preservar com contexto.</p>
+  </section>
+  <section class="section-pad section-pad--topless">
+    <div class="notes-grid notes-grid--archive">
+      {notes.map((note) => <NoteCard note={note} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import NoteCard from '../components/NoteCard.astro';
+
+const base = import.meta.env.BASE_URL;
+const projects = (await getCollection('projects'))
+  .filter((project) => project.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
+---
+<BaseLayout>
+  <section class="hero section-pad">
+    <div class="hero__kicker eyebrow">BASE PRÓPRIA · RIO DE JANEIRO</div>
+    <h1>Eu construo, testo<br /><span>e documento.</span></h1>
+    <p class="hero__lead">Sou Leo Thaylor. Professor de jiu-jitsu e construtor de projetos digitais. Este é meu endereço na internet: o que já existe, o que estou testando e o que aprendo no processo.</p>
+    <div class="hero__routes" aria-label="Caminhos principais">
+      <a class="route-card route-card--primary" href="https://leothaylor.github.io/aulas-jiu-jitsu/" data-track="click_bjj">
+        <span class="route-card__index">01</span>
+        <strong>Treinar Jiu-Jitsu</strong>
+        <small>Aulas presenciais, método e Área do Aluno.</small>
+        <b>↗</b>
+      </a>
+      <a class="route-card" href={`${base}projetos/`} data-track="click_project">
+        <span class="route-card__index">02</span>
+        <strong>Ver o que construo</strong>
+        <small>Produtos, sites, sistemas, operações e laboratório.</small>
+        <b>→</b>
+      </a>
+      <a class="route-card" href={`${base}notas/`} data-track="click_note">
+        <span class="route-card__index">03</span>
+        <strong>Ler minhas notas</strong>
+        <small>Decisões, experimentos, aprendizados e arquivo.</small>
+        <b>→</b>
+      </a>
+    </div>
+  </section>
+
+  <section class="manifesto-strip" aria-label="Princípio de trabalho">
+    <div class="marquee-copy">PROBLEMA REAL <i>→</i> ORGANIZAR <i>→</i> CONSTRUIR <i>→</i> TESTAR <i>→</i> REGISTRAR <i>→</i> CORRIGIR</div>
+  </section>
+
+  <section class="section-pad" id="destaques">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">PROJETOS EM DESTAQUE</span>
+        <h2>Coisas que já saíram<br />da ideia.</h2>
+      </div>
+      <a class="section-link" href={`${base}projetos/`}>Ver todos os projetos →</a>
+    </div>
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section-pad notes-section">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">NOTAS</span>
+        <h2>O raciocínio também<br />faz parte do trabalho.</h2>
+      </div>
+      <a class="section-link" href={`${base}notas/`}>Todas as notas →</a>
+    </div>
+    <div class="notes-grid">
+      {notes.map((note) => <NoteCard note={note} />)}
+    </div>
+  </section>
+
+  <section class="section-pad pattern-section">
+    <div class="pattern-section__number">*</div>
+    <div>
+      <span class="eyebrow">O PADRÃO</span>
+      <h2>Áreas diferentes.<br />Um modo parecido de trabalhar.</h2>
+      <p>Normalmente começo por um problema concreto, organizo o que está acontecendo, construo uma solução possível e testo no mundo real. Hoje isso aparece em web, automação, IA, produto, conteúdo e jiu-jitsu.</p>
+    </div>
+  </section>
+</BaseLayout>
