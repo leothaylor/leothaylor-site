@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/kimono-showcase.css';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -79,3 +80,17 @@ const style = `--project-accent:${data.accent};--project-accent-2:${data.accent2
     {data.tags.length > 0 && <div class="tag-list">{data.tags.map((tag) => <span>{tag}</span>)}</div>}
   </article>
 </BaseLayout>
+
+<script is:inline>
+  document.querySelectorAll('.kimono-slot__img').forEach((img) => {
+    const slot = img.closest('.kimono-slot');
+    const markMissing = () => slot && slot.classList.add('is-missing');
+    const markReady = () => slot && slot.classList.remove('is-missing');
+    img.addEventListener('error', markMissing);
+    img.addEventListener('load', markReady);
+    if (img.complete) {
+      if (img.naturalWidth === 0) markMissing();
+      else markReady();
+    }
+  });
+</script>
