@@ -124,6 +124,28 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
 
   document.querySelectorAll('.kimono-model').forEach(refreshKimonoModel);
 
+  const showcase = document.querySelector('.case-content--extension-lab .kimono-showcase');
+  if (showcase && !document.querySelector('.extension-kit')) {
+    const kit = document.createElement('section');
+    kit.className = 'extension-kit';
+    kit.setAttribute('aria-labelledby', 'kimono-kit-title');
+    kit.innerHTML = `
+      <div class="extension-kit__topline">
+        <span>EXTENSION KIT · V1</span>
+        <small>download direto · sem cadastro</small>
+      </div>
+      <h3 id="kimono-kit-title">Construa sua própria versão do Kimono Fusion.</h3>
+      <p>O pacote reúne as Instructions originais, 9 arquivos de Knowledge, documentação de arquitetura, licença e guias de configuração para ChatGPT GPT, Gemini Gem e Claude Project.</p>
+      <div class="extension-kit__flow" aria-label="Fluxo do framework">
+        <span>ARTE</span><i>→</i><span>EXTRAÇÃO</span><i>→</i><span>PRODUCT CANON</span><i>→</i><span>CONTINUIDADE</span><i>→</i><span>QA</span><i>→</i><span>MASTER PROMPT</span>
+      </div>
+      <div class="extension-kit__footer">
+        <div class="extension-kit__meta"><span>ZIP · 31 KB</span><span>GRATUITO</span><span>USO PERMITIDO · SEM REDISTRIBUIÇÃO</span></div>
+        <a class="extension-kit__button" href="../../downloads/kimono-fusion/kimono-fusion-extension-kit-v1.zip" download>↓ Baixar Extension Kit</a>
+      </div>`;
+    showcase.insertAdjacentElement('afterend', kit);
+  }
+
   const lightbox = document.getElementById('project-media-lightbox');
   const lightboxImage = lightbox?.querySelector('.media-lightbox__stage img');
   const lightboxStage = lightbox?.querySelector('.media-lightbox__stage');
