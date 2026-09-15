@@ -1,0 +1,104 @@
+name: Capture client site covers
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/capture-client-site-covers.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture first fold
+        run: |
+          mkdir -p public/project-media
+          cat > /tmp/capture.mjs <<'EOF'
+          import { chromium } from 'playwright';
+
+          const jobs = [
+            {
+              url: 'https://coachjussansilva.com.br/',
+              path: 'public/project-media/jussan-site-home.png'
+            },
+            {
+              url: 'https://cristianomatospsicologo.com.br/',
+              path: 'public/project-media/cristiano-site-home.png'
+            }
+          ];
+
+          const browser = await chromium.launch({ headless: true });
+          for (const job of jobs) {
+            const page = await browser.newPage({
+              viewport: { width: 1440, height: 900 },
+              deviceScaleFactor: 1
+            });
+            await page.goto(job.url, { waitUntil: 'networkidle', timeout: 120000 });
+            await page.evaluate(() => document.fonts?.ready);
+            await page.waitForTimeout(1500);
+            await page.screenshot({ path: job.path, fullPage: false });
+            await page.close();
+          }
+          await browser.close();
+          EOF
+          node /tmp/capture.mjs
+
+      - name: Point project cards to homepage screenshots
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              Path('src/content/projects/jussan-silva.md'): (
+                  'https://raw.githubusercontent.com/leothaylor/JussanSilvaPersonalV2/main/assets/autonomia.jpg',
+                  'https://raw.githubusercontent.com/leothaylor/leothaylor-site/main/public/project-media/jussan-site-home.png',
+                  'Material visual do site de Jussan Silva',
+                  'Print da primeira dobra do site publicado de Jussan Silva',
+                  'Um dos materiais visuais usados na versão publicada.',
+                  'Primeira dobra da versão publicada em coachjussansilva.com.br.'
+              ),
+              Path('src/content/projects/cristiano-matos.md'): (
+                  'https://raw.githubusercontent.com/leothaylor/cristiano-matos-site/main/assets/cristiano-hero.jpg',
+                  'https://raw.githubusercontent.com/leothaylor/leothaylor-site/main/public/project-media/cristiano-site-home.png',
+                  'Foto usada no hero do site de Cristiano Matos',
+                  'Print da primeira dobra do site publicado de Cristiano Matos',
+                  'Hero da versão pública.',
+                  'Primeira dobra da versão publicada em cristianomatospsicologo.com.br.'
+              )
+          }
+
+          for path, (old_url, new_url, old_alt, new_alt, old_caption, new_caption) in replacements.items():
+              text = path.read_text(encoding='utf-8')
+              text = text.replace(old_url, new_url, 1)
+              text = text.replace(old_alt, new_alt, 1)
+              text = text.replace(old_caption, new_caption, 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit screenshots and card updates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/project-media/jussan-site-home.png public/project-media/cristiano-site-home.png src/content/projects/jussan-silva.md src/content/projects/cristiano-matos.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'feat: use homepage screenshots for client site cards'
+          git push
