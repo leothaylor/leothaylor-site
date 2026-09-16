@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import NoteCard from '../../components/NoteCard.astro';
+import '../../styles/aps-proposals.css';
 
+const base = import.meta.env.BASE_URL;
 const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.data.order);
 ---
 <BaseLayout title="Notas · Leo Thaylor" description="Registros de trabalho de Leo Thaylor sobre projetos, sistemas, testes, decisões e jiu-jitsu.">
@@ -11,7 +13,17 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
     <h1>Notas de trabalho.</h1>
     <p>Registro decisões, mudanças de direção, bugs, testes e ideias que quero conseguir consultar depois. Alguns textos explicam projetos; outros preservam de onde uma decisão veio.</p>
   </section>
+
   <section class="section-pad section-pad--topless">
+    <article class="aps-notes-feature reveal">
+      <div><span class="aps-notes-feature__kicker">ARQUIVO DE TRABALHO · APS</span></div>
+      <div>
+        <h2>Propostas de melhoria na APS.</h2>
+        <p>Três trabalhos desenvolvidos a partir de problemas observados enquanto eu trabalhava em uma Clínica da Família: uma caderneta da gestante, o Projeto ASTA e uma proposta de acompanhamento nutricional longitudinal no pré-natal. O arquivo separa o que foi realmente produzido do que permaneceu como proposta.</p>
+        <a class="aps-collection-card__link" href={`${base}notas/propostas-melhoria-aps/`}>Abrir coleção →</a>
+      </div>
+    </article>
+
     <div class="notes-grid notes-grid--archive">
       {notes.map((note) => <NoteCard note={note} />)}
     </div>

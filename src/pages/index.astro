@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import NoteCard from '../components/NoteCard.astro';
 import '../styles/home-marquee.css';
+import '../styles/aps-proposals.css';
 
 const base = import.meta.env.BASE_URL;
 const projects = (await getCollection('projects'))
@@ -90,6 +91,17 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
     </div>
     <div class="project-showcase">
       {projects.map((project) => <ProjectCard project={project} mode="feature" />)}
+    </div>
+  </section>
+
+  <section class="aps-home-spotlight section-pad reveal">
+    <div class="aps-home-spotlight__inner">
+      <span class="eyebrow">ARQUIVO DE TRABALHO · APS</span>
+      <div>
+        <h2>Propostas de melhoria na APS.</h2>
+        <p>Três trabalhos históricos com documentação recuperada: Caderneta da Gestante, Projeto ASTA e uma proposta de acompanhamento nutricional longitudinal no pré-natal.</p>
+      </div>
+      <a class="aps-home-spotlight__link" href={`${base}notas/propostas-melhoria-aps/`} data-track="click_note">Ver coleção →</a>
     </div>
   </section>
 

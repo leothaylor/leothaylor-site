@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ApsImageGallery from '../../../components/ApsImageGallery.astro';
+import '../../../styles/aps-proposals.css';
+
+const base = import.meta.env.BASE_URL;
+const media = [
+  { src: `${base}project-media/aps/pre-natal-nutricao/nutricao-01-apresentacao.png`, alt: 'Apresentação original da proposta de pré-natal com acompanhamento nutricional', caption: 'Material de apresentação produzido em 2024.' },
+  { src: `${base}project-media/aps/pre-natal-nutricao/nutricao-02-proposta-original.png`, alt: 'Documento original da proposta de acompanhamento nutricional no pré-natal', caption: 'Documento original com a proposta e os mecanismos imaginados.' },
+  { src: `${base}project-media/aps/pre-natal-nutricao/nutricao-03-modelo-assistencial.png`, alt: 'Reconstrução visual do modelo assistencial proposto', caption: 'Reconstrução visual atual do modelo. Não é um artefato original de 2024.' }
+];
+---
+<BaseLayout title="Pré-natal com acompanhamento nutricional longitudinal · Leo Thaylor" description="Proposta de modelo assistencial para incorporar acompanhamento nutricional longitudinal ao pré-natal na Atenção Primária.">
+  <article class="aps-case section-pad">
+    <a class="back-link" href={`${base}notas/propostas-melhoria-aps/`}>← Propostas de melhoria na APS</a>
+
+    <header class="aps-case-hero reveal">
+      <div class="aps-case-hero__index">03</div>
+      <div class="aps-case-hero__content">
+        <div class="aps-case-meta">
+          <span>Proposta de modelo assistencial</span>
+          <span>2024</span>
+          <span class="is-status">Não implementada</span>
+        </div>
+        <h1>Pré-natal com acompanhamento nutricional longitudinal</h1>
+        <p>Uma proposta para incorporar acompanhamento nutricional de forma contínua ao pré-natal na Atenção Primária, com foco em desfechos maternos e perinatais. Os documentos contemporâneos registram consultas mensais, sem comprovar um protocolo 1:1 fechado naquele momento.</p>
+      </div>
+    </header>
+
+    <div class="aps-case-body">
+      <aside class="aps-case-index reveal">
+        <span>CASO 03</span>
+        <strong>Pré-natal + nutrição</strong>
+        <p>Proposta assistencial com textos e slides. Sem implementação comprovada.</p>
+      </aside>
+
+      <div class="aps-case-content">
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">PROBLEMA OBSERVADO</span>
+          <h2>Trazer a nutrição para dentro do acompanhamento longitudinal.</h2>
+          <p>A proposta buscava evitar que a assistência nutricional surgisse apenas de forma pontual ou depois da instalação de risco. Os documentos de setembro de 2024 imaginavam consultas nutricionais mensais durante o pré-natal e ações de orientação pré-concepcional.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">MODELO PROPOSTO</span>
+          <h2>Pré-natal clínico com uma camada nutricional contínua.</h2>
+          <div class="aps-flow" aria-label="Fluxo conceitual do modelo assistencial">
+            <div class="aps-flow__node">Pré-natal</div><div class="aps-flow__arrow">→</div>
+            <div class="aps-flow__node">Medicina / enfermagem</div><div class="aps-flow__arrow">+</div>
+            <div class="aps-flow__node">Nutrição longitudinal</div>
+          </div>
+          <p>A razão estrita de uma consulta nutricional para cada consulta clínica aparece com mais clareza apenas no registro retrospectivo de 2026. Por isso, o site não apresenta o pareamento 1:1 como um protocolo documentalmente fechado em 2024.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">DESFECHOS QUE A PROPOSTA PRETENDIA AFETAR</span>
+          <h2>O foco estava em riscos maternos e perinatais.</h2>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>MATERNOS</span><strong>Anemia, diabetes gestacional e ganho de peso inadequado</strong></div>
+            <div class="aps-fact"><span>OBSTÉTRICOS</span><strong>Hipertensão e preeclâmpsia</strong></div>
+            <div class="aps-fact"><span>PERINATAIS</span><strong>Prematuridade e baixo peso ao nascer</strong></div>
+            <div class="aps-fact"><span>LONGO PRAZO</span><strong>Mortalidade infantil apenas como hipótese exploratória, não como resultado medido</strong></div>
+          </div>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">REGISTRO VISUAL</span>
+          <h2>Os materiais recuperados mostram a proposta, não resultados.</h2>
+          <p>Há documentos de texto e apresentações produzidos em 2024. O terceiro espaço foi reservado para uma reconstrução visual atual do modelo, que deve permanecer identificada como reconstrução e não como documento original.</p>
+          <ApsImageGallery items={media} columns={3} label="Galeria da proposta de pré-natal com acompanhamento nutricional" />
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">ATÉ ONDE CHEGOU</span>
+          <h2>Proposta documentada, sem execução comprovada.</h2>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>PRODUZIDO</span><strong>Três documentos de texto e dois materiais de apresentação</strong></div>
+            <div class="aps-fact"><span>DESENHO</span><strong>Acompanhamento nutricional mensal e longitudinal</strong></div>
+            <div class="aps-fact"><span>NÃO COMPROVADO</span><strong>Agenda implantada, protocolo aprovado ou grupo comparador</strong></div>
+            <div class="aps-fact"><span>NÃO MEDIDO</span><strong>Redução de mortalidade ou impacto econômico validado</strong></div>
+          </div>
+          <div class="aps-caution">
+            <strong>Limite factual</strong>
+            <p>Os antigos números de 25%, 15% e R$ 174 milhões não são apresentados como evidência do modelo. A auditoria documental não encontrou sustentação suficiente para tratá-los como resultados ou estimativas validadas da proposta.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="aps-case-footer reveal">
+      <p>Classificação pública: proposta de modelo assistencial na APS, documentada em 2024 e não implementada.</p>
+      <a href={`${base}notas/propostas-melhoria-aps/`}>Voltar à coleção →</a>
+    </footer>
+  </article>
+</BaseLayout>

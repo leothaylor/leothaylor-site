@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ApsImageGallery from '../../../components/ApsImageGallery.astro';
+import '../../../styles/aps-proposals.css';
+
+const base = import.meta.env.BASE_URL;
+const media = [
+  { src: `${base}project-media/aps/asta/asta-01-apresentacao.png`, alt: 'Apresentação original do Projeto ASTA', caption: 'Apresentação preparada para comunicar a proposta.' },
+  { src: `${base}project-media/aps/asta/asta-02-funcao-e-areas.png`, alt: 'Documento do Projeto ASTA com função e áreas de atuação', caption: 'Função e áreas de atuação previstas.' },
+  { src: `${base}project-media/aps/asta/asta-03-semana-ou-fluxo.png`, alt: 'Material do Projeto ASTA com distribuição semanal ou fluxo de trabalho', caption: 'Distribuição semanal e fluxo de trabalho.' },
+  { src: `${base}project-media/aps/asta/asta-04-plano-implantacao.png`, alt: 'Plano gradual de implantação do Projeto ASTA', caption: 'Plano de implantação previsto em três meses.' }
+];
+---
+<BaseLayout title="Projeto ASTA · Leo Thaylor" description="Proposta de reorganização do trabalho em uma equipe de Saúde da Família, com função, limites, rotina, implantação e indicadores previstos.">
+  <article class="aps-case section-pad">
+    <a class="back-link" href={`${base}notas/propostas-melhoria-aps/`}>← Propostas de melhoria na APS</a>
+
+    <header class="aps-case-hero reveal">
+      <div class="aps-case-hero__index">02</div>
+      <div class="aps-case-hero__content">
+        <div class="aps-case-meta">
+          <span>Proposta de reorganização do trabalho</span>
+          <span>2025</span>
+          <span class="is-status">Não implementado</span>
+        </div>
+        <h1>Projeto ASTA</h1>
+        <p>Uma proposta para designar um Agente Comunitário de Saúde da própria equipe como referência organizacional, com limites claros de atuação, rotina semanal, ferramentas simples, plano de implantação e indicadores previstos.</p>
+      </div>
+    </header>
+
+    <div class="aps-case-body">
+      <aside class="aps-case-index reveal">
+        <span>CASO 02</span>
+        <strong>Projeto ASTA</strong>
+        <p>Desenho operacional completo no papel. Não houve implantação comprovada.</p>
+      </aside>
+
+      <div class="aps-case-content">
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">PROBLEMA OBSERVADO</span>
+          <h2>Organizar o fluxo sem empurrar demandas operacionais para dentro da consulta.</h2>
+          <p>A proposta nasceu de problemas cotidianos de coordenação: interrupções de consultas por demandas operacionais, circulação fragmentada de informações, pendências que poderiam passar despercebidas e necessidade de organizar calendário, reuniões e acompanhamento do trabalho territorial.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">A PROPOSTA</span>
+          <h2>Um ACS da própria equipe como referência organizacional.</h2>
+          <p>O desenho previa um ASTA por equipe de Saúde da Família para apoiar a organização interna sem assumir gestão, recepção ou decisões clínicas.</p>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>FRENTE 01</span><strong>Apoio ao salão e ao fluxo cotidiano</strong></div>
+            <div class="aps-fact"><span>FRENTE 02</span><strong>Apoio à reunião semanal e às pendências</strong></div>
+            <div class="aps-fact"><span>FRENTE 03</span><strong>Organização administrativa interna da própria equipe</strong></div>
+            <div class="aps-fact"><span>FERRAMENTAS</span><strong>Caderno, calendário, pasta de pendências e planilha opcional</strong></div>
+          </div>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">PLANO DE IMPLANTAÇÃO</span>
+          <h2>O projeto chegou a prever três meses de implantação gradual.</h2>
+          <div class="aps-timeline">
+            <article><span>MÊS 1</span><strong>Observar</strong><p>Mapear demandas, interrupções e pontos de perda de informação.</p></article>
+            <article><span>MÊS 2</span><strong>Organizar</strong><p>Estruturar calendário, reunião e acompanhamento de pendências.</p></article>
+            <article><span>MÊS 3</span><strong>Acompanhar</strong><p>Observar indicadores e produzir relato de resultados.</p></article>
+          </div>
+          <p>Os documentos estão escritos como plano futuro. Não foram encontrados relatórios mensais preenchidos, atas de início ou série antes/depois.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">LIMITES PREVISTOS</span>
+          <h2>O próprio desenho tentava impedir desvio de função.</h2>
+          <ul>
+            <li>Não tomar decisões clínicas.</li>
+            <li>Não substituir a recepção.</li>
+            <li>Não representar a gestão da unidade.</li>
+            <li>Manter a atuação vinculada à própria equipe e ao trabalho territorial.</li>
+          </ul>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">REGISTRO VISUAL</span>
+          <h2>Função, fluxo, implantação e apresentação chegaram a ser documentados.</h2>
+          <p>Foram recuperados blocos detalhados, análise de viabilidade, plano gradual, roteiro de apresentação e diferentes PDFs de comunicação do projeto.</p>
+          <ApsImageGallery items={media} columns={2} label="Galeria do Projeto ASTA" />
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">ATÉ ONDE CHEGOU</span>
+          <h2>Projeto estruturado, sem piloto comprovado.</h2>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>PRODUZIDO</span><strong>Função, áreas, rotina, limites, implantação e apresentação</strong></div>
+            <div class="aps-fact"><span>INDICADORES</span><strong>Metas e métricas previstas, não resultados observados</strong></div>
+            <div class="aps-fact"><span>NÃO COMPROVADO</span><strong>Designação formal, aprovação institucional ou ato de RH</strong></div>
+            <div class="aps-fact"><span>NÃO MEDIDO</span><strong>Série temporal de interrupções ou avaliação antes/depois</strong></div>
+          </div>
+          <div class="aps-caution">
+            <strong>Limite factual</strong>
+            <p>Percentuais antigos de 60% ou 70%, além de baselines como 20 interrupções médicas por dia e 45 minutos de espera, não possuem base auditável suficiente para serem apresentados como resultados.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="aps-case-footer reveal">
+      <p>Classificação pública: proposta de reorganização do trabalho na APS, desenvolvida no papel e não implementada.</p>
+      <a href={`${base}notas/propostas-melhoria-aps/pre-natal-nutricao/`}>Próximo: Pré-natal + nutrição →</a>
+    </footer>
+  </article>
+</BaseLayout>

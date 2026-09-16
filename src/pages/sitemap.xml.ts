@@ -8,6 +8,10 @@ export async function GET({ site }: { site: URL }) {
     base,
     `${base}projetos/`,
     `${base}notas/`,
+    `${base}notas/propostas-melhoria-aps/`,
+    `${base}notas/propostas-melhoria-aps/caderneta-gestante/`,
+    `${base}notas/propostas-melhoria-aps/projeto-asta/`,
+    `${base}notas/propostas-melhoria-aps/pre-natal-nutricao/`,
     ...projects.map((project) => `${base}projetos/${project.id}/`),
     ...notes.map((note) => `${base}notas/${note.id}/`)
   ];

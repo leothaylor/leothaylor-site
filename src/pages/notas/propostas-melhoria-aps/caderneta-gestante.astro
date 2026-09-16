@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ApsImageGallery from '../../../components/ApsImageGallery.astro';
+import '../../../styles/aps-proposals.css';
+
+const base = import.meta.env.BASE_URL;
+const media = [
+  { src: `${base}project-media/aps/caderneta/caderneta-01-capa.png`, alt: 'Capa do protótipo da Caderneta de Acompanhamento da Gestante', caption: 'Capa do protótipo.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-02-visao-geral.png`, alt: 'Visão geral das páginas da Caderneta de Acompanhamento da Gestante', caption: 'Visão geral do conjunto de páginas.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-03-acompanhamento.png`, alt: 'Página de acompanhamento longitudinal da gestante', caption: 'Estrutura de acompanhamento ao longo da gestação.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-04-periodo-gestacional.png`, alt: 'Página da caderneta organizada por período gestacional', caption: 'Perguntas e registros organizados por fase da gestação.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-05-folheto.png`, alt: 'Versão em folheto da Caderneta de Acompanhamento da Gestante', caption: 'Versão em formato de folheto.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-06-livreto.png`, alt: 'Versão em livreto da Caderneta de Acompanhamento da Gestante', caption: 'Versão em livreto.' }
+];
+---
+<BaseLayout title="Caderneta de Acompanhamento da Gestante · Leo Thaylor" description="Protótipo de instrumento criado para apoiar o acompanhamento longitudinal de gestantes pelo ACS na Atenção Primária.">
+  <article class="aps-case section-pad">
+    <a class="back-link" href={`${base}notas/propostas-melhoria-aps/`}>← Propostas de melhoria na APS</a>
+
+    <header class="aps-case-hero reveal">
+      <div class="aps-case-hero__index">01</div>
+      <div class="aps-case-hero__content">
+        <div class="aps-case-meta">
+          <span>Protótipo de instrumento de acompanhamento</span>
+          <span>2024–2025</span>
+          <span class="is-status">Não testado em campo</span>
+        </div>
+        <h1>Caderneta de Acompanhamento da Gestante</h1>
+        <p>Um protótipo autoral para apoiar o acompanhamento longitudinal de gestantes pelo Agente Comunitário de Saúde, com organização por período gestacional, exames, vacinação, sinais de alerta e continuidade com enfermagem e medicina.</p>
+      </div>
+    </header>
+
+    <div class="aps-case-body">
+      <aside class="aps-case-index reveal">
+        <span>CASO 01</span>
+        <strong>Caderneta da Gestante</strong>
+        <p>Protótipo visual e longitudinal. Não houve implementação ou avaliação comprovada.</p>
+      </aside>
+
+      <div class="aps-case-content">
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">PROBLEMA OBSERVADO</span>
+          <h2>Dar continuidade ao acompanhamento entre uma visita e outra.</h2>
+          <p>O ponto de partida era a fragmentação do acompanhamento. O ACS acompanha a gestante no território, enquanto enfermagem e medicina concentram o cuidado clínico. O protótipo buscava organizar informações úteis ao longo do pré-natal e puerpério, reduzindo a dependência da memória e facilitando a sinalização de pendências e sinais de alerta.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">O QUE FOI DESENHADO</span>
+          <h2>Um instrumento longitudinal, feito para acompanhar a gestação em etapas.</h2>
+          <p>O material recuperado inclui identificação da gestante, direitos, vacinação, perguntas por faixa gestacional, exames, sinais de alerta, atribuições do ACS e espaço para observações.</p>
+          <div class="aps-flow" aria-label="Fluxo conceitual da caderneta">
+            <div class="aps-flow__node">Gestante</div><div class="aps-flow__arrow">→</div>
+            <div class="aps-flow__node">ACS</div><div class="aps-flow__arrow">→</div>
+            <div class="aps-flow__node">Caderneta</div>
+          </div>
+          <div class="aps-flow" aria-label="Continuidade com a equipe clínica">
+            <div class="aps-flow__node">Acompanhamento longitudinal</div><div class="aps-flow__arrow">→</div>
+            <div class="aps-flow__node">Sinalização de alerta</div><div class="aps-flow__arrow">→</div>
+            <div class="aps-flow__node">Enfermagem / medicina</div>
+          </div>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">REGISTRO VISUAL</span>
+          <h2>O protótipo chegou a ter múltiplas versões.</h2>
+          <p>Foram recuperadas páginas editáveis, revisões, capas, uma versão identificada como modelo piloto de 14 páginas, folheto, livreto e compilações intermediárias.</p>
+          <ApsImageGallery items={media} columns={2} label="Galeria da Caderneta de Acompanhamento da Gestante" />
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">ATÉ ONDE CHEGOU</span>
+          <h2>Protótipo desenvolvido, sem comprovação de adoção.</h2>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>PRODUZIDO</span><strong>Páginas, capas, piloto, folheto e livreto</strong></div>
+            <div class="aps-fact"><span>INTEGRAÇÃO PREVISTA</span><strong>ACS com comunicação para enfermagem e medicina diante de alertas</strong></div>
+            <div class="aps-fact"><span>NÃO COMPROVADO</span><strong>Homologação, distribuição ou uso assistencial</strong></div>
+            <div class="aps-fact"><span>NÃO MEDIDO</span><strong>Adesão, segurança clínica ou impacto antes/depois</strong></div>
+          </div>
+          <div class="aps-caution">
+            <strong>Limite factual</strong>
+            <p>Algumas versões misturam perguntas que um ACS pode fazer com descrições de atos clínicos. Qualquer reaproveitamento assistencial exigiria revisão atual de escopo profissional e protocolos vigentes.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="aps-case-footer reveal">
+      <p>Classificação pública: protótipo de instrumento de acompanhamento, não implementado e não testado em campo.</p>
+      <a href={`${base}notas/propostas-melhoria-aps/projeto-asta/`}>Próximo: Projeto ASTA →</a>
+    </footer>
+  </article>
+</BaseLayout>
