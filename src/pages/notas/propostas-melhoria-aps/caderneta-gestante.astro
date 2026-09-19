@@ -5,15 +5,15 @@ import '../../../styles/aps-proposals.css';
 
 const base = import.meta.env.BASE_URL;
 const media = [
-  { src: `${base}project-media/aps/caderneta/caderneta-01-capa.png`, alt: 'Capa do protótipo da Caderneta de Acompanhamento da Gestante', caption: 'Capa do protótipo.' },
-  { src: `${base}project-media/aps/caderneta/caderneta-02-visao-geral.png`, alt: 'Visão geral das páginas da Caderneta de Acompanhamento da Gestante', caption: 'Visão geral do conjunto de páginas.' },
-  { src: `${base}project-media/aps/caderneta/caderneta-03-acompanhamento.png`, alt: 'Página de acompanhamento longitudinal da gestante', caption: 'Estrutura de acompanhamento ao longo da gestação.' },
-  { src: `${base}project-media/aps/caderneta/caderneta-04-periodo-gestacional.png`, alt: 'Página da caderneta organizada por período gestacional', caption: 'Perguntas e registros organizados por fase da gestação.' },
-  { src: `${base}project-media/aps/caderneta/caderneta-05-folheto.png`, alt: 'Versão em folheto da Caderneta de Acompanhamento da Gestante', caption: 'Versão em formato de folheto.' },
-  { src: `${base}project-media/aps/caderneta/caderneta-06-livreto.png`, alt: 'Versão em livreto da Caderneta de Acompanhamento da Gestante', caption: 'Versão em livreto.' }
+  { src: `${base}project-media/aps/caderneta/caderneta-01-capa.png`, alt: 'Capa do protótipo da Caderneta de Acompanhamento da Gestante', caption: 'Uma das capas desenvolvidas para o protótipo.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-02-visao-geral.png`, alt: 'Visão geral das páginas da Caderneta de Acompanhamento da Gestante', caption: 'Visão geral das páginas e da organização longitudinal.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-03-acompanhamento.png`, alt: 'Página que integra conteúdo clínico e perguntas do ACS', caption: 'Exemplo da integração entre informações do pré-natal e acompanhamento do ACS.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-04-periodo-gestacional.png`, alt: 'Página da caderneta organizada por período gestacional', caption: 'Perguntas e orientações organizadas por fase da gestação.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-05-folheto.png`, alt: 'Versão em folheto da Caderneta de Acompanhamento da Gestante', caption: 'Versão desenvolvida em formato de folheto.' },
+  { src: `${base}project-media/aps/caderneta/caderneta-06-livreto.png`, alt: 'Versão em livreto da Caderneta de Acompanhamento da Gestante', caption: 'Versão desenvolvida em formato de livreto.' }
 ];
 ---
-<BaseLayout title="Caderneta de Acompanhamento da Gestante · Leo Thaylor" description="Como eu desenhei um protótipo de caderneta integrada para aproximar o acompanhamento do ACS das consultas de enfermagem e medicina no pré-natal.">
+<BaseLayout title="Caderneta de Acompanhamento da Gestante · Leo Thaylor" description="Como eu desenvolvi uma proposta de caderneta integrada para conectar consulta, território e educação em saúde durante o pré-natal.">
   <article class="aps-case section-pad">
     <a class="back-link" href={`${base}notas/propostas-melhoria-aps/`}>← Propostas de melhoria na APS</a>
 
@@ -21,12 +21,12 @@ const media = [
       <div class="aps-case-hero__index">01</div>
       <div class="aps-case-hero__content">
         <div class="aps-case-meta">
-          <span>Protótipo de instrumento de acompanhamento</span>
-          <span>2024–2025</span>
-          <span class="is-status">Não testado em campo</span>
+          <span>Protótipo de instrumento integrado</span>
+          <span>Jun 2024 · Abr 2025</span>
+          <span class="is-status">Não implementado</span>
         </div>
         <h1>Caderneta de Acompanhamento da Gestante</h1>
-        <p>Enquanto eu trabalhava como ACS, desenhei uma proposta para ampliar a caderneta que acompanha a gestante no pré-natal. A ideia era manter o conteúdo clínico usado por medicina e enfermagem e acrescentar, no mesmo instrumento, as perguntas de acompanhamento do ACS e conteúdo educativo organizado ao longo da gestação.</p>
+        <p>Eu queria transformar a caderneta da gestante em um ponto de integração entre consulta, território e educação em saúde. A proposta reunia, no mesmo instrumento levado pela gestante, registros do pré-natal, perguntas de acompanhamento do ACS e informações educativas organizadas ao longo da gravidez.</p>
       </div>
     </header>
 
@@ -34,68 +34,101 @@ const media = [
       <aside class="aps-case-index reveal">
         <span>CASO 01</span>
         <strong>Caderneta da Gestante</strong>
-        <p>Eu desenvolvi o protótipo em várias versões. A proposta não chegou a ser implementada nem testada em campo.</p>
+        <p>Desenvolvi o projeto entre 2024 e 2025, com páginas editáveis, revisões, capas, compilações, modelo piloto, folheto e livreto.</p>
       </aside>
 
       <div class="aps-case-content">
         <section class="aps-section reveal">
           <span class="aps-section__eyebrow">O PROBLEMA QUE EU VIA</span>
-          <h2>A visita podia virar coleta de dados em vez de tempo de vínculo.</h2>
-          <p>Nas visitas, parte do acompanhamento da gestante dependia de perguntas que o ACS precisava fazer e registrar. Eu via um risco de a visita ficar presa a esse roteiro: perguntar, preencher e repetir informações, quando aquele tempo também poderia ser usado para conversar sobre dúvidas, contexto familiar, dificuldades e situações que só aparecem quando existe relação de confiança.</p>
-          <p>Ao mesmo tempo, a gestante já levava uma caderneta para as consultas de pré-natal. Minha proposta nasceu daí: em vez de manter informações separadas entre território e consulta, eu queria que o mesmo instrumento ajudasse ACS, enfermagem e medicina a enxergar partes diferentes do acompanhamento.</p>
+          <h2>A visita podia ficar presa a perguntas e registros.</h2>
+          <p>Enquanto trabalhava como ACS, percebia que parte importante da visita à gestante podia ser consumida por perguntas obrigatórias, conferência de informações e preenchimento de dados. Esses registros eram necessários, mas eu não queria que a visita se resumisse a perguntar, anotar e repetir.</p>
+          <p>Eu queria preservar mais tempo para dúvidas reais, dificuldades da gestante, contexto familiar, orientação e vínculo. Ao mesmo tempo, muitas informações do acompanhamento ficavam separadas entre território e consulta.</p>
         </section>
 
         <section class="aps-section reveal">
-          <span class="aps-section__eyebrow">O QUE EU DESENHEI</span>
-          <h2>Uma caderneta única, mais completa, que acompanhasse a gestante em casa e na consulta.</h2>
-          <p>Eu não queria retirar a parte técnica do pré-natal. A proposta era preservar os registros clínicos e gráficos usados pela equipe e acrescentar uma camada voltada ao acompanhamento territorial: perguntas do ACS, vacinação, exames, sinais de alerta, observações e informações educativas sobre o que esperar em cada fase da gestação.</p>
-          <p>A gestante ficaria com a caderneta. Na visita domiciliar, o ACS poderia consultar o que já estava registrado, atualizar o que fosse necessário e usar o restante do encontro para uma conversa menos mecânica. Depois, ao levar a mesma caderneta para a consulta, medicina e enfermagem também teriam acesso ao que havia sido registrado no território. Na visita seguinte, o ACS poderia ver o que tinha sido atualizado na consulta.</p>
+          <span class="aps-section__eyebrow">A IDEIA CENTRAL</span>
+          <h2>Uma mesma caderneta circulando entre casa e consulta.</h2>
+          <p>A gestante ficaria com a caderneta e a levaria tanto para as consultas quanto para o acompanhamento no território. O ACS poderia consultar o que já havia sido registrado, atualizar as perguntas necessárias e conversar sobre o que realmente precisava de atenção naquele momento.</p>
+          <p>Depois, enfermagem e medicina também teriam acesso ao que havia sido registrado pelo ACS. Na visita seguinte, o ACS poderia ver o que tinha sido atualizado na consulta. A proposta era criar continuidade em vez de três acompanhamentos isolados.</p>
           <div class="aps-flow" aria-label="Fluxo conceitual da caderneta integrada">
             <div class="aps-flow__node">Gestante</div><div class="aps-flow__arrow">→</div>
-            <div class="aps-flow__node">Caderneta integrada</div><div class="aps-flow__arrow">↔</div>
+            <div class="aps-flow__node">Mesma caderneta</div><div class="aps-flow__arrow">↔</div>
             <div class="aps-flow__node">ACS</div>
           </div>
-          <div class="aps-flow" aria-label="Integração com a equipe clínica">
-            <div class="aps-flow__node">Visita domiciliar</div><div class="aps-flow__arrow">↔</div>
-            <div class="aps-flow__node">Mesmo registro</div><div class="aps-flow__arrow">↔</div>
+          <div class="aps-flow" aria-label="Integração da caderneta com a consulta">
+            <div class="aps-flow__node">Visita no território</div><div class="aps-flow__arrow">↔</div>
+            <div class="aps-flow__node">Registro compartilhado</div><div class="aps-flow__arrow">↔</div>
             <div class="aps-flow__node">Enfermagem / medicina</div>
           </div>
         </section>
 
         <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">TRÊS CAMADAS NO MESMO INSTRUMENTO</span>
+          <h2>Pré-natal, acompanhamento do ACS e educação em saúde.</h2>
+          <div class="aps-fact-grid">
+            <div class="aps-fact"><span>CLÍNICA</span><strong>Pressão, peso, BCF, altura uterina, exames e outros registros do pré-natal</strong></div>
+            <div class="aps-fact"><span>TERRITÓRIO</span><strong>Perguntas do ACS, vacinação, sintomas, sinais de alerta e observações</strong></div>
+            <div class="aps-fact"><span>EDUCAÇÃO</span><strong>Desenvolvimento do bebê, direitos, alimentação, parto, amamentação e puerpério</strong></div>
+            <div class="aps-fact"><span>CONTINUIDADE</span><strong>A mesma informação acompanhando a gestante entre casa e unidade</strong></div>
+          </div>
+          <p>O protótipo já colocava essas camadas lado a lado. Em uma mesma fase da gestação, por exemplo, apareciam itens clínicos e perguntas como “realizou os exames solicitados?”, “teve sangramento?”, “sentiu o bebê mexer?” ou “visitou a maternidade de referência?”.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">ACOMPANHAMENTO LONGITUDINAL</span>
+          <h2>As perguntas mudavam conforme a fase da gestação.</h2>
+          <p>Eu organizei o acompanhamento por períodos gestacionais. As versões do projeto trazem blocos que vão de 0–12 semanas até 40–41 semanas, ajustando perguntas, sinais de atenção, exames e orientações ao momento da gravidez.</p>
+          <p>A caderneta também incluía ou previa informações sobre vacinação, desenvolvimento do bebê, alimentação, atividade física, maternidade de referência, direitos, preparação para o parto, amamentação, cuidados com o bebê e autocuidado no puerpério.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">O PAPEL DO ACS</span>
+          <h2>A proposta era acompanhar e conectar, não substituir a equipe clínica.</h2>
+          <p>O material previa atuação do ACS na captação precoce para o pré-natal, orientação sobre consultas, vacinação, acompanhamento de exames, busca ativa de faltosas, observação de sinais relatados pela gestante e comunicação com enfermagem ou medicina diante de situações de alerta.</p>
+          <p>Depois do parto, o acompanhamento continuaria no puerpério, incluindo orientações sobre amamentação e planejamento familiar.</p>
+        </section>
+
+        <section class="aps-section reveal">
+          <span class="aps-section__eyebrow">DO CONCEITO AO PROTÓTIPO</span>
+          <h2>A visão era mais ampla do que a versão que consegui materializar.</h2>
+          <p>Minha visão final era uma caderneta realmente integrada, preservando também a parte técnica completa do pré-natal usada por enfermagem e medicina. O protótipo que desenvolvi já combinava conteúdo clínico, perguntas do ACS e educação em saúde, mas ainda não reproduzia toda a estrutura da caderneta clínica oficial com todos os gráficos e campos técnicos.</p>
+          <p>Por isso, considero o material um estágio avançado do conceito, ainda em desenvolvimento editorial e estrutural.</p>
+        </section>
+
+        <section class="aps-section reveal">
           <span class="aps-section__eyebrow">O QUE EU PRODUZI</span>
-          <h2>A ideia virou um protótipo com diferentes formatos.</h2>
-          <p>Na reconstrução dos arquivos, recuperei páginas editáveis, revisões, opções de capa, uma versão identificada como modelo piloto de 14 páginas, uma versão em folheto, uma versão em livreto e compilações intermediárias.</p>
+          <h2>O projeto ganhou várias versões e formatos.</h2>
+          <p>Comecei a desenvolver páginas editáveis em junho de 2024. Ao longo de 2024 e início de 2025, fiz revisões, variações de capa, compilações, uma versão de 11 páginas, um modelo piloto de 14 páginas, folheto, livreto e outros testes de diagramação. Também cheguei a criar diferentes opções visuais de capa para o material.</p>
           <ApsImageGallery items={media} columns={2} label="Galeria da Caderneta de Acompanhamento da Gestante" />
         </section>
 
         <section class="aps-section reveal">
-          <span class="aps-section__eyebrow">APRESENTAÇÃO E CONTINUIDADE</span>
-          <h2>A proposta não avançou para implantação.</h2>
-          <p>Eu lembro de ter apresentado a proposta à gestão da clínica. Na auditoria documental que fiz depois, porém, não encontrei ata, e-mail ou outro registro contemporâneo que comprove essa etapa. Por isso, registro essa apresentação como lembrança pessoal, e não como marco institucional documentado.</p>
-          <p>O que os arquivos comprovam é o desenvolvimento do protótipo. Não encontrei evidência de homologação, distribuição para gestantes, adoção pela equipe ou avaliação em campo.</p>
+          <span class="aps-section__eyebrow">REFERÊNCIAS DE TRABALHO</span>
+          <h2>O projeto foi desenvolvido junto de materiais de pré-natal e acompanhamento gestacional.</h2>
+          <p>Durante esse período, eu reuni materiais como o Guia Rápido de Pré-Natal da SMS-RJ, calendário nacional de vacinação da gestante, conteúdos sobre direitos da gestante e outros documentos relacionados ao acompanhamento na APS.</p>
+          <p>Também havia no meu acervo um estudo observacional de Santos et al. (2023) sobre indicadores do pré-natal em uma UBS de Manaus. Esses materiais serviam como contexto de estudo e elaboração, mas o protótipo não passou por uma validação clínica formal.</p>
         </section>
 
         <section class="aps-section reveal">
-          <span class="aps-section__eyebrow">BASE E LIMITES</span>
-          <h2>Eu encontrei materiais de referência, mas não uma validação formal do instrumento.</h2>
-          <p>O conjunto de arquivos também contém materiais institucionais usados como contexto. A auditoria, porém, não permite afirmar quais trechos fundamentaram diretamente cada parte da caderneta nem que houve revisão clínica formal do protótipo naquela época.</p>
+          <span class="aps-section__eyebrow">ATÉ ONDE O PROJETO CHEGOU</span>
+          <h2>Eu apresentei a proposta à gestão, mas ela não teve continuidade.</h2>
+          <p>O projeto ficou no estágio de proposta e protótipo. Não houve homologação, distribuição oficial para gestantes, adoção pela equipe, implantação do fluxo integrado ou teste em campo.</p>
           <div class="aps-fact-grid">
-            <div class="aps-fact"><span>PRODUZIDO</span><strong>Páginas, capas, piloto, folheto e livreto</strong></div>
-            <div class="aps-fact"><span>INTEGRAÇÃO PROPOSTA</span><strong>ACS, gestante, enfermagem e medicina usando o mesmo instrumento</strong></div>
-            <div class="aps-fact"><span>NÃO COMPROVADO</span><strong>Homologação, distribuição ou uso assistencial</strong></div>
-            <div class="aps-fact"><span>NÃO MEDIDO</span><strong>Adesão, segurança clínica ou impacto antes/depois</strong></div>
+            <div class="aps-fact"><span>PRODUZIDO</span><strong>Páginas, revisões, capas, compilações, piloto, folheto e livreto</strong></div>
+            <div class="aps-fact"><span>INTEGRAÇÃO PROPOSTA</span><strong>Gestante, ACS, enfermagem e medicina usando o mesmo instrumento</strong></div>
+            <div class="aps-fact"><span>STATUS</span><strong>Não houve implantação institucional</strong></div>
+            <div class="aps-fact"><span>AVALIAÇÃO</span><strong>Não houve teste de campo ou medição de impacto</strong></div>
           </div>
           <div class="aps-caution">
-            <strong>Limite factual</strong>
-            <p>Algumas versões misturam perguntas que um ACS pode fazer com descrições de atos clínicos. Qualquer reaproveitamento assistencial exigiria revisão atual de escopo profissional e dos protocolos vigentes.</p>
+            <strong>Se eu retomasse esse instrumento hoje</strong>
+            <p>O conteúdo precisaria ser revisado à luz dos protocolos atuais, com separação clara entre registro clínico e acompanhamento do ACS, além de revisão por enfermagem e medicina antes de qualquer uso assistencial.</p>
           </div>
         </section>
       </div>
     </div>
 
     <footer class="aps-case-footer reveal">
-      <p>Eu classifico este trabalho como um protótipo de instrumento de acompanhamento. Desenvolvi o material, mas não cheguei a testá-lo em campo.</p>
+      <p>Eu classifico este trabalho como um protótipo de instrumento integrado de acompanhamento gestacional. A proposta chegou a um material concreto, mas não avançou para implantação ou teste em campo.</p>
       <a href={`${base}notas/propostas-melhoria-aps/projeto-asta/`}>Próximo: Projeto ASTA →</a>
     </footer>
   </article>
