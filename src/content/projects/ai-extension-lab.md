@@ -1,11 +1,11 @@
 ---
 title: AI Extension Lab
-summary: "Laboratório de extensões GPT criadas para tarefas repetitivas e padronizadas. Cada agente resolve um tipo de trabalho específico: direção visual, identidade, storyboard, roteiro, produto, mapas ou produção de conteúdo."
+summary: "Eu transformo tarefas repetitivas em extensões GPT com regras próprias para direção visual, identidade, storyboard, roteiro, produto, mapas e conteúdo."
 category: Laboratório
 status: Em laboratório
 year: "2026"
 role: Desenho de sistema, instruções, base de conhecimento e validação
-proof: "A seleção pública reúne oito extensões com uso real, resultado visual forte ou utilidade operacional clara: Kimono Fusion, FaceLock, Visual DNA, Jussan Storyboard, Roteirista ROTINA ACS, Designer Editorial ACS Flat 2D, Virtual Outfit Identity Lock e Gerador de Mapas NotebookLM."
+proof: "Hoje mostro oito extensões que já usei na prática, validei visualmente ou mantive porque resolvem uma tarefa concreta."
 featured: false
 order: 10
 tags: [IA, agentes, prompt systems, validação, design]
@@ -27,9 +27,9 @@ metrics:
 
 Eu crio extensões quando uma tarefa começa a exigir as mesmas regras muitas vezes.
 
-Em vez de reexplicar tudo em cada conversa, transformo a tarefa em um agente especializado. A extensão recebe uma entrada conhecida, aplica um conjunto de regras estáveis e devolve um resultado dentro de um formato esperado.
+Quando percebo que estou repetindo as mesmas instruções várias vezes, transformo aquilo em uma extensão. Deixo as regras fixas dentro dela e, a cada uso, troco apenas o material ou o contexto de entrada.
 
-Na prática, isso serve para coisas como:
+Hoje eu uso esse formato para coisas como:
 
 - transformar uma arte em um produto físico coerente;
 - copiar a estrutura visual de uma referência sem copiar literalmente a peça;
@@ -48,7 +48,7 @@ O Kimono Fusion nasceu de uma ideia de produto que eu já carregava: criar kimon
 
 Eu envio uma arte de referência. Pode ser anime, filme, ilustração, fotografia, pintura ou outra linguagem visual. A extensão analisa essa arte e cria um MASTER PROMPT para transformar a referência em um kimono premium.
 
-O ponto mais importante é a continuidade.
+O problema que mais me importava resolver era a continuidade entre as imagens.
 
 Não basta gerar um kimono bonito de frente e outro bonito de costas. Frente, costas, interior, macros e product board precisam parecer fotografias do mesmo produto.
 
@@ -109,7 +109,7 @@ O resultado é uma série de imagens realistas do mesmo kimono em vários ângul
 
 ## FaceLock Prompt Engine
 
-O FaceLock resolve outro problema recorrente.
+Criei o FaceLock para um problema que aparecia sempre que eu tentava reconstruir uma referência visual com a minha própria foto.
 
 Eu encontro no Pinterest ou em campanhas uma foto com pose, luz, cenário ou direção de arte interessante. Envio essa referência para a extensão. Ela desmonta a estrutura da imagem e devolve um prompt preparado para reconstruir aquela cena com a minha própria foto.
 
@@ -131,13 +131,13 @@ A extensão tenta preservar:
 - ambiente;
 - composição.
 
-É especialmente útil quando quero uma fotografia editorial ou cinematográfica com uma direção visual específica, mas sem perder minha identidade no processo.
+Eu uso principalmente quando quero uma foto editorial ou cinematográfica com uma direção visual específica sem perder minha identidade no processo.
 
 **Uso atual:** ocasional. Foi uma das extensões com maior volume de uso e continua útil quando quero produzir imagens pessoais com direção visual forte.
 
 ## Visual DNA Prompt Engine
 
-O Visual DNA Prompt Engine trabalha com identidade visual de peças, não com identidade facial.
+No Visual DNA, o foco muda: em vez de preservar um rosto, eu tento preservar a lógica visual de uma peça.
 
 Eu posso pegar uma arte que gostei e usar como referência estrutural. A extensão analisa paleta, tipografia, hierarquia, composição, textura, distribuição de elementos e linguagem visual.
 
@@ -152,7 +152,7 @@ Exemplo:
 
 A extensão cria prompts para esses novos slides mantendo o universo visual da referência, sem simplesmente repetir a mesma composição.
 
-Isso permite transformar uma única referência em uma pequena linguagem visual reutilizável.
+Com isso, uma única referência pode virar ponto de partida para várias peças novas sem eu precisar copiar a composição original.
 
 Usei essa lógica também em trabalhos da Neural Concursos, onde uma arte aprovada passou a funcionar como fonte de DNA visual para peças seguintes.
 
@@ -172,7 +172,7 @@ A função da extensão pode ser resumida assim:
 
 `conteúdo decidido → briefing → storyboard visual → gravação`
 
-Esse tipo de ferramenta me interessa porque transforma conhecimento implícito de direção em um objeto que pode ser entregue para outra pessoa.
+O que eu gostei nesse teste foi conseguir passar minha direção para outra pessoa sem precisar explicar tudo de novo por áudio ou mensagem.
 
 **Uso atual:** ocasional. Validado em uso com terceiro e com exemplos visuais que podem ser mostrados no case.
 
@@ -192,7 +192,7 @@ A extensão não decide sozinha o que vai ser publicado. Ela amplia o espaço de
 
 Eu comparo os roteiros, descarto os fracos, combino partes quando necessário e escolho o que realmente vale produzir.
 
-Isso é útil porque preserva a linguagem e os problemas reais do ACS sem depender de uma conversa longa toda vez que quero explorar novos ângulos.
+Para mim, o ganho é conseguir explorar vários ângulos sem recomeçar uma conversa longa toda vez e sem perder a linguagem do ROTINA ACS.
 
 **Uso atual:** frequente. É uma extensão operacional, não apenas um experimento.
 
@@ -210,7 +210,7 @@ Na prática:
 
 Isso evita reescrever toda a especificação visual do canal a cada slide.
 
-O valor está justamente na especialização. A extensão conhece as restrições daquele formato específico e trabalha dentro delas.
+O ganho é não precisar reescrever toda a especificação visual a cada uso. As restrições daquele formato já ficam dentro da extensão.
 
 **Uso atual:** frequente. É uma das ferramentas mais maduras do laboratório porque participa diretamente da produção atual do ROTINA ACS.
 
@@ -250,13 +250,13 @@ O fluxo ficou:
 
 Usei essa lógica, por exemplo, para organizar estruturas ligadas ao BJJ e à trajetória faixa branca → azul.
 
-A extensão não tenta ser o mapa final. Ela prepara a informação para que a ferramenta de visualização receba uma árvore explícita e tenha menos espaço para interpretar a hierarquia de forma errada.
+Eu não uso a extensão para desenhar o mapa final. Ela organiza a informação antes, para o NotebookLM receber uma árvore explícita e ter menos espaço para entender a hierarquia de forma errada.
 
 **Uso atual:** ocasional. Continua útil sempre que preciso transformar raciocínio complexo em uma representação visual organizada.
 
-## O padrão por trás das oito extensões
+## Quando eu decido criar uma extensão
 
-Apesar de resolverem problemas diferentes, quase todas seguem a mesma arquitetura.
+Mesmo quando o problema muda, quase sempre sigo o mesmo caminho:
 
 1. Identificar a tarefa que está se repetindo.
 2. Separar regra fixa de contexto variável.
@@ -267,4 +267,4 @@ Apesar de resolverem problemas diferentes, quase todas seguem a mesma arquitetur
 7. Guardar erros, restrições e casos que funcionaram.
 8. Ajustar a extensão sem perder o aprendizado anterior.
 
-É por isso que uso extensões principalmente para tarefas padronizadas e repetitivas. Quando o trabalho depende de histórico longitudinal, memória pessoal ou contexto acumulado, prefiro outras estruturas, como projetos e bases no Notion.
+Eu uso extensões principalmente quando a tarefa se repete e tem regras que posso deixar fixas. Quando o trabalho depende de histórico, memória pessoal ou contexto acumulado, prefiro manter isso em projetos e bases no Notion.

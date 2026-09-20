@@ -3,10 +3,10 @@ title: Eu construía sistemas antes de saber chamar isso de sistema
 date: 2026-09-15
 category: Arquivo / trajetória
 order: 2
-summary: "Registros antigos mostram uma tendência recorrente: pegar uma atividade, decompor o problema, registrar e tentar melhorar o processo."
-provenance: "Linha histórica reconstruída a partir de registros pessoais, principalmente Facebook Messenger. Datas e níveis de confiança são preservados quando há incerteza."
+summary: "Quando olho meus registros antigos, vejo o mesmo padrão aparecendo várias vezes: entender uma atividade, separar as partes, registrar e tentar melhorar o processo."
+provenance: "Esses exemplos vêm de registros pessoais antigos, principalmente do Facebook Messenger. Quando uma data ou interpretação não é totalmente segura, eu mantenho essa incerteza explícita."
 ---
-Quando olho para os projetos atuais, aparecem React, Python, APIs, Git, IA e automação. As conversas antigas mostram que o comportamento começou antes dessas ferramentas.
+Quando olho para os projetos atuais, aparecem React, Python, APIs, Git, IA e automação. Mas, voltando aos meus registros antigos, vejo que o jeito de pensar já aparecia antes dessas ferramentas.
 
 ## Alguns registros
 
@@ -24,8 +24,8 @@ Quando olho para os projetos atuais, aparecem React, Python, APIs, Git, IA e aut
 
 **2026:** o mesmo padrão aparece com ferramentas mais fortes e uma infraestrutura própria de registro.
 
-## O padrão que eu consigo sustentar pelos registros
+## O padrão que continua aparecendo
 
-Os projetos não são a mesma coisa e eu não trato uma ideia antiga como se já contivesse o sistema atual.
+Eu não trato uma ideia antiga como se ela já fosse o sistema que construí depois. São projetos diferentes, em épocas diferentes.
 
-O que aparece de forma recorrente é a vontade de entender uma atividade, separar suas partes, registrar o que acontece e construir um jeito melhor de executá-la.
+O que continua aparecendo é a vontade de entender uma atividade, separar suas partes, registrar o que acontece e tentar construir um jeito melhor de executá-la.

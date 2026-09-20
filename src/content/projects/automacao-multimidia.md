@@ -1,6 +1,6 @@
 ---
 title: Suíte local de automação multimídia
-summary: "Suíte local no Windows que transforma gravações brutas em material pronto para uso: extrai B-roll e fotos, corta aulas, sincroniza cenas à música, prepara podcasts, trabalha áudio e gera três versões de Reel a partir dos mesmos takes."
+summary: "Eu montei uma suíte local no Windows para tirar trabalho repetitivo da edição: extrair B-roll e fotos, cortar aulas, sincronizar cenas, preparar áudio e gerar versões de Reel."
 category: Sistema interno
 status: Operado
 year: "2026"
@@ -25,7 +25,7 @@ metrics:
 ---
 ## O que é
 
-É uma coleção de automações locais que fui construindo para retirar etapas repetitivas da edição de vídeo e áudio. Em vez de abrir um editor e repetir manualmente o mesmo processo toda vez, cada necessidade recorrente pode virar um módulo próprio.
+Fui juntando essas automações à medida que a mesma tarefa de edição aparecia de novo. Quando percebo que estou repetindo um processo manual, tento transformar aquilo em um módulo que eu possa rodar outra vez.
 
 A suíte roda no meu PC com Python, FFmpeg, FFprobe, PowerShell e arquivos BAT. Muitos módulos têm uma estrutura simples de pastas: `ENTRADA` recebe os arquivos brutos, `INICIAR.bat` abre a automação e `SAIDA` recebe o resultado. Alguns também geram `RELATORIOS`, arquivos temporários e configurações específicas.
 
@@ -39,7 +39,7 @@ O fluxo foi pensado para ser operacional, sem depender de terminal no uso cotidi
 4. a automação analisa e processa o material;
 5. retiro o resultado da pasta `SAIDA` e faço apenas a revisão final.
 
-Isso permite gravar uma vez e reaproveitar o mesmo material em formatos diferentes.
+Assim eu consigo gravar uma vez e reaproveitar o mesmo material em formatos diferentes.
 
 ## O que a suíte já faz
 
@@ -93,12 +93,10 @@ Também surgiram correções específicas para caminhos com acentos no Windows, 
 
 ## O papel da IA
 
-A IA entra onde faz sentido analisar conteúdo, classificar material ou ajudar na decisão. O processamento de tempo, corte, concatenação, renderização e validação fica no código quando precisa ser determinístico.
-
-Esse desenho permite combinar interpretação com execução reproduzível.
+Uso IA quando preciso analisar ou classificar o conteúdo. Para corte, duração, sincronização, renderização e validação, prefiro deixar Python e FFmpeg fazendo o trabalho, porque preciso de um comportamento previsível e repetível.
 
 ## Por que mantenho isso local
 
-A suíte funciona como uma oficina pessoal de produção. Arquivos grandes permanecem no PC, o processamento pode ser repetido sem depender de uma plataforma externa e cada melhoria fica disponível para os próximos trabalhos.
+Mantenho a suíte local porque trabalho com arquivos grandes e quero conseguir repetir o processamento sem depender de uma plataforma externa. Cada correção que faço continua disponível para o próximo vídeo.
 
-O objetivo é reduzir tarefas mecânicas e deixar mais tempo para escolher o que vale publicar, ensinar ou desenvolver.
+No fim, quero gastar menos tempo repetindo tarefa mecânica e mais tempo escolhendo o que vale publicar, ensinar ou desenvolver.

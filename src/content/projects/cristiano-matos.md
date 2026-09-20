@@ -1,6 +1,6 @@
 ---
 title: Cristiano Matos
-summary: "Site para atendimento psicológico online, com foco em apresentação profissional, explicação do atendimento e contato direto."
+summary: "Eu criei o site do Cristiano Matos para apresentar o atendimento psicológico online, explicar como funciona e deixar o caminho para contato direto."
 category: Projeto para cliente
 status: Publicado
 year: "2026"
@@ -36,7 +36,7 @@ metrics:
 ---
 ## Objetivo
 
-O Cristiano precisava de um endereço próprio para apresentar o atendimento psicológico online e facilitar o agendamento. A V1 foi planejada para resolver isso com uma página direta e fácil de navegar.
+Eu criei o site do Cristiano para concentrar a apresentação profissional, explicar como funciona o atendimento psicológico online e deixar o caminho para agendamento direto. A primeira versão foi pensada para resolver isso sem transformar a página em um site grande ou complicado.
 
 ## Estrutura da página
 

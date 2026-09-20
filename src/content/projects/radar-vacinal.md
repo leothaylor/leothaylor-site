@@ -1,6 +1,6 @@
 ---
 title: Radar Vacinal ACS
-summary: "Aplicativo instalável para o ACS acompanhar vacinação, busca ativa, histórico de doses e backups no próprio aparelho, inclusive offline."
+summary: "Eu criei um aplicativo instalável para o ACS acompanhar vacinação, busca ativa, histórico de doses e backups no próprio aparelho, inclusive offline."
 category: Produto próprio
 status: Publicado e validado
 year: "2026"
@@ -50,4 +50,4 @@ A validação passou por instalação e uso em Windows e iPhone. O ponto princip
 
 ## Decisão de produto
 
-A primeira direção comercial previa uma versão paga. Depois de analisar suporte, manutenção, responsabilidade e preço, eu mudei a estratégia. A versão ampliada passou a ser gratuita e entrou no ROTINA ACS como ferramenta útil, demonstração de produto e porta de entrada para o restante do ecossistema.
+A primeira direção comercial previa uma versão paga. Depois de analisar suporte, manutenção, responsabilidade e preço, eu mudei a estratégia. A versão ampliada passou a ser gratuita e entrou no ROTINA ACS como ferramenta de uso direto e também como uma forma de apresentar o restante do que eu vinha construindo.

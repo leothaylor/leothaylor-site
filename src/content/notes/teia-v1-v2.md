@@ -3,7 +3,7 @@ title: "Da Teia V1 à V2: quando eu parei de remendar e reescrevi"
 date: 2026-09-15
 category: Produto
 order: 3
-summary: "O uso da primeira Teia mostrou que o produto precisava de outra estrutura. A V2 foi refeita em React, TypeScript e React Flow."
+summary: "Depois de usar a primeira Teia, percebi que precisava de outra estrutura. A V2 foi refeita em React, TypeScript e React Flow."
 ---
 A primeira Teia de Ideias funcionava. Eu conseguia criar nós, mover elementos e ligar uma coisa à outra.
 

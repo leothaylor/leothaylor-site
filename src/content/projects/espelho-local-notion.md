@@ -1,6 +1,6 @@
 ---
 title: Espelho Local do Notion
-summary: "Backup local do meu workspace do Notion em Markdown e CSV, com histórico no Git e atualização por duplo clique."
+summary: "Eu mantenho uma cópia local do meu Notion em Markdown e CSV, com histórico no Git e atualização por duplo clique."
 category: Sistema interno
 status: Validado
 year: "2026"

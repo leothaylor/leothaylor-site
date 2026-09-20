@@ -20,7 +20,7 @@ const date = data.date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'lon
       <div class="case-hero__meta"><span class="eyebrow">{data.category}</span><time datetime={data.date.toISOString()}>{date}</time></div>
       <h1>{data.title}</h1>
       <p>{data.summary}</p>
-      {data.provenance && <div class="provenance"><strong>PROCEDÊNCIA</strong><span>{data.provenance}</span></div>}
+      {data.provenance && <div class="provenance"><strong>DE ONDE VÊM ESTES REGISTROS</strong><span>{data.provenance}</span></div>}
     </header>
     <div class="prose note-content reveal"><Content /></div>
   </article>

@@ -1,6 +1,6 @@
 ---
 title: Teia de Ideias V2
-summary: "Canvas visual para ligar ideias, ações, decisões, experimentos e resultados em um fluxo que continua editável."
+summary: "Eu criei a Teia para ligar ideias, ações, decisões, experimentos e resultados num fluxo visual que continua editável."
 category: Produto próprio
 status: Publicado e validado
 year: "2025 a 2026"

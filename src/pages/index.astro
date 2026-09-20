@@ -63,13 +63,13 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
     </div>
 
     <div class="system-flow reveal" aria-label="Fluxo de captura, organização e backup">
-      <div class="flow-step"><span>CAPTURA</span><strong>WhatsApp</strong><p>Ideias e observações entram por um canal rápido, sem exigir organização na hora.</p></div>
+      <div class="flow-step"><span>CAPTURA</span><strong>WhatsApp</strong><p>Eu jogo ideias e observações num canal rápido, sem precisar organizar tudo na hora.</p></div>
       <div class="flow-arrow"><i></i></div>
-      <div class="flow-step"><span>TRIAGEM</span><strong>GPT</strong><p>O contexto é organizado e só o que merece continuidade vira registro permanente.</p></div>
+      <div class="flow-step"><span>TRIAGEM</span><strong>GPT</strong><p>Uso o GPT para separar o que merece virar projeto, tarefa, decisão ou registro.</p></div>
       <div class="flow-arrow"><i></i></div>
-      <div class="flow-step flow-step--main"><span>MEMÓRIA</span><strong>OS Leo no Notion</strong><p>Projetos, tarefas, ideias, conteúdo, estudos, decisões, experimentos e registros de BJJ ficam separados por função.</p></div>
+      <div class="flow-step flow-step--main"><span>MEMÓRIA</span><strong>OS Leo no Notion</strong><p>No OS Leo, separo projetos, tarefas, ideias, conteúdo, estudos, decisões, experimentos e registros de BJJ.</p></div>
       <div class="flow-arrow"><i></i></div>
-      <div class="flow-step"><span>BACKUP</span><strong>Espelho local + Git</strong><p>Python lê a API do Notion e gera Markdown e CSV em uma pasta local versionada.</p></div>
+      <div class="flow-step"><span>BACKUP</span><strong>Espelho local + Git</strong><p>Um script em Python lê a API do Notion e gera Markdown e CSV numa pasta local versionada.</p></div>
     </div>
 
     <div class="system-metrics reveal">
@@ -85,7 +85,7 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
     <div class="section-head reveal">
       <div>
         <span class="eyebrow">PROJETOS EM DESTAQUE</span>
-        <h2>Seis projetos com material para conferir.</h2>
+        <h2>Alguns projetos que já posso mostrar por dentro.</h2>
       </div>
       <a class="section-link" href={`${base}projetos/`}>Ver todos →</a>
     </div>
@@ -109,7 +109,7 @@ const notes = (await getCollection('notes')).sort((a, b) => a.data.order - b.dat
     <div class="section-head reveal">
       <div>
         <span class="eyebrow">NOTAS DE TRABALHO</span>
-        <h2>O que mudou, por quê e o que eu aprendi.</h2>
+        <h2>O que eu mudei, testei e aprendi no caminho.</h2>
       </div>
       <a class="section-link" href={`${base}notas/`}>Todas as notas →</a>
     </div>

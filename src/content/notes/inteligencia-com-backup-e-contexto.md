@@ -1,6 +1,6 @@
 ---
 title: Inteligência com backup e contexto
-summary: "Como eu junto WhatsApp, GPT, Notion, um espelho local e Git para conseguir retomar projetos sem reconstruir a história toda."
+summary: "Eu junto WhatsApp, GPT, Notion, um espelho local e Git para conseguir retomar projetos sem reconstruir a história toda."
 date: 2026-09-15
 category: Sistemas
 order: 1

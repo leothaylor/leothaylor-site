@@ -1,6 +1,6 @@
 ---
 title: "BJJ LT: aulas e método"
-summary: "Aulas presenciais de jiu-jitsu com currículo, registros do que aconteceu no tatame e uma Área do Aluno ligada ao conteúdo ensinado."
+summary: "Eu organizo minhas aulas de jiu-jitsu com currículo, registro do que aconteceu no tatame e uma Área do Aluno ligada ao conteúdo que foi ensinado."
 category: Jiu-Jitsu
 status: Operado
 year: "2026"

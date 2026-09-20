@@ -1,6 +1,6 @@
 ---
 title: Jussan Silva
-summary: "Revisão da presença digital de um personal trainer, com oferta, site, posicionamento e caminho direto para o WhatsApp."
+summary: "Eu reorganizei a presença digital do Jussan Silva, mexendo em oferta, site, posicionamento e no caminho até a conversa pelo WhatsApp."
 category: Projeto para cliente
 status: Publicado e validado
 year: "2026"
@@ -40,7 +40,7 @@ Jussan já tinha clientes, formação e uma primeira versão do site feita por e
 
 ## Oferta e posicionamento
 
-A consultoria online foi colocada no centro. A comunicação começou com dois eixos: qualidade de vida e performance esportiva. A ideia era observar quem respondia melhor antes de estreitar o público.
+Coloquei a consultoria online no centro e comecei a comunicação com dois eixos: qualidade de vida e performance esportiva. Preferi observar quem respondia melhor antes de estreitar o público.
 
 ## Site
 

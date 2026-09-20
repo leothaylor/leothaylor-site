@@ -1,6 +1,6 @@
 ---
 title: ROTINA ACS
-summary: "Marca e ecossistema com conteúdo, ferramentas e produtos voltados ao trabalho de Agente Comunitário de Saúde."
+summary: "Eu reuni no ROTINA ACS conteúdo, ferramentas e produtos que fui criando a partir de problemas reais do trabalho de Agente Comunitário de Saúde."
 category: Ecossistema próprio
 status: Operado
 year: "2024 a 2026"
@@ -39,9 +39,9 @@ metrics:
 ---
 ## Origem
 
-Os registros de 2024 mostram tentativas de organizar demandas da equipe, acompanhar grupos prioritários e criar um banco de dados para contornar falhas do sistema disponível no trabalho. Na mesma época apareceu a ideia de reunir ferramentas úteis para ACS.
+Em 2024, enquanto ainda trabalhava como ACS, eu já tentava organizar demandas da equipe, acompanhar grupos prioritários e contornar limitações dos sistemas que usávamos no trabalho. Foi nessa época que comecei a pensar em reunir ferramentas úteis para ACS em um só lugar.
 
-Esse conjunto de problemas virou matéria-prima para o ROTINA ACS.
+Dessas tentativas nasceu o ROTINA ACS.
 
 ## O que existe hoje
 
@@ -51,4 +51,4 @@ A marca tem domínio próprio e funciona como ponto de ligação entre conteúdo
 
 Eu mantenho mudanças de produto e aquisição documentadas. O Radar, por exemplo, mudou de direção comercial e passou a ser gratuito. O APS360 perdeu prioridade. O preço e o papel do SuperKit também foram revistos ao longo da operação.
 
-Isso permite comparar hipóteses antigas com o que aconteceu depois, sem depender da memória do momento.
+Com esse histórico, consigo comparar o que eu imaginava que funcionaria com o que aconteceu depois, sem depender só da memória.

@@ -43,7 +43,7 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
 
       <div class="case-facts">
         <div><small>MEU PAPEL</small><strong>{data.role}</strong></div>
-        <div><small>ESTADO / EVIDÊNCIA</small><strong>{data.proof}</strong></div>
+        <div><small>O QUE EXISTE HOJE</small><strong>{data.proof}</strong></div>
       </div>
       {(data.liveUrl || data.repoUrl) && (
         <div class="case-actions">
@@ -55,7 +55,7 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
 
     <div class="case-body-grid">
       <aside class="case-index reveal">
-        <span>CASE</span>
+        <span>PROJETO</span>
         <strong>{String(data.order).padStart(2, '0')}</strong>
         <p>{data.category}<br />{data.status}</p>
       </aside>
@@ -66,7 +66,7 @@ const contentClass = `prose case-content reveal${project.id === 'ai-extension-la
 
     {data.media.length > 1 && (
       <section class="case-gallery reveal" aria-label="Galeria do projeto">
-        <div class="case-gallery__head"><span class="eyebrow">REGISTRO VISUAL</span><h2>Telas, materiais e resultados.</h2></div>
+        <div class="case-gallery__head"><span class="eyebrow">REGISTRO VISUAL</span><h2>Algumas telas e materiais do projeto.</h2></div>
         <div class="case-gallery__grid">
           {data.media.slice(1).map((item) => (
             <figure class:list={{ 'is-contain': item.fit === 'contain' }}>

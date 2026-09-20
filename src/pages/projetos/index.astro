@@ -5,11 +5,11 @@ import ProjectCard from '../../components/ProjectCard.astro';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
-<BaseLayout title="Projetos · Leo Thaylor" description="Sites, produtos, automações e sistemas construídos ou dirigidos por Leo Thaylor.">
+<BaseLayout title="Projetos · Leo Thaylor" description="Projetos que eu construí, dirigi ou coloquei para funcionar: sites, produtos, automações e sistemas.">
   <section class="page-hero section-pad page-hero--compact reveal">
     <span class="eyebrow">PROJETOS</span>
     <h1>Coisas que eu construí, dirigi ou coloquei para funcionar.</h1>
-    <p>Cada case mostra o escopo, meu papel, o estado atual e alguma evidência concreta. Quando existe uma versão pública, você pode abrir o projeto ou consultar o repositório.</p>
+    <p>Em cada projeto eu mostro o que fiz, por que fiz, até onde cheguei e o que existe hoje. Quando há uma versão pública, deixo o projeto ou o repositório aberto para conferir.</p>
   </section>
 
   <section class="section-pad section-pad--topless">

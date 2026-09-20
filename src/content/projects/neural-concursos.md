@@ -1,6 +1,6 @@
 ---
 title: Neural Concursos
-summary: "Projeto de posicionamento, produto, site, funil e conteúdo para um negócio de preparação para concursos."
+summary: "Eu trabalhei no posicionamento, produto, site, funil e conteúdo da Neural Concursos até a entrega final dos ativos ao cliente."
 category: Projeto para cliente
 status: Concluído e entregue
 year: "2026"
@@ -51,4 +51,4 @@ A rodada final analisou 7 referências e preservou 168 publicações, com 84 con
 
 O pacote final incluiu 8 roteiros, direção editorial e documentação. O repositório do site foi transferido para a conta do cliente e testado depois da mudança de proprietário.
 
-O encerramento foi parte do projeto: deixar os ativos organizados para o cliente continuar sem depender de mim para produzir cada peça.
+Antes de sair da operação, organizei os ativos, documentei o que precisava continuar funcionando e transferi o repositório para o cliente. A ideia era que ele conseguisse seguir sem depender de mim para cada nova peça.
