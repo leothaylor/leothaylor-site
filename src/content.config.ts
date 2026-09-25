@@ -46,6 +46,12 @@ const notes = defineCollection({
     date: z.coerce.date(),
     category: z.string(),
     order: z.number().default(99),
+    published: z.boolean().default(false),
+    demo: z.boolean().default(false),
+    placeholderImage: z.boolean().default(false),
+    heroImage: z.string().optional(),
+    heroAlt: z.string().optional(),
+    heroCaption: z.string().optional(),
     provenance: z.string().optional()
   })
 });

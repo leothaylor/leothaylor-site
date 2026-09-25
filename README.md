@@ -1,51 +1,29 @@
-# Leo Thaylor — site pessoal V1
+# Leo Thaylor — site oficial
 
-Base própria na internet para reunir projetos reais, notas autorais e o caminho direto para o jiu-jitsu.
+Base própria na internet para reunir projetos, hipóteses e ideias, jiu-jitsu e outras frentes públicas do Leo Thaylor.
 
 ## Arquitetura
 
-- **Home** — três portas principais: Jiu-Jitsu, Projetos e Notas.
-- **Projetos** — cases públicos, sistemas internos e laboratório com estado de maturidade explícito.
-- **Notas** — publicações autorais; a rede social funciona como distribuição, não como arquivo principal.
-- **Jiu-Jitsu** — direciona para o site oficial já existente.
-
-Não existe página `/sobre` na V1. A identidade aparece pelo que está construído e publicado.
-
-## Destaques da Home
-
-1. Radar Vacinal ACS
-2. Teia de Ideias V2
-3. ROTINA ACS
-4. Neural Concursos
-5. Jussan Silva
-6. Cristiano Matos
+- **Home** — entrada central para Projetos, Notas, Jiu-Jitsu e Barbearia.
+- **Projetos** — seleção de produtos, sites, sistemas, ferramentas e trabalhos entregues ou operados.
+- **Notas** — hipóteses, perguntas e ideias publicadas em formato editorial, preservando o estado da investigação.
+- **Jiu-Jitsu** — direciona para o site público de aulas e Área do Aluno.
+- **Barbearia** — direciona para o site público de portfólio e atendimento.
 
 ## Stack
 
 - Astro 7
 - conteúdo em Markdown via Content Collections
-- CSS próprio, sem framework visual
+- CSS próprio
 - GitHub Pages
 - analytics opcional por `PUBLIC_GA_ID`
 
-## Desenvolvimento
-
-```bash
-npm install
-npm run dev
-npm run build
-```
-
 ## Publicação
 
-O workflow `.github/workflows/deploy.yml` gera e envia `dist/` para GitHub Pages a cada push na `main`.
+O workflow `.github/workflows/deploy.yml` publica a `main` no GitHub Pages.
 
-Para a primeira publicação, se o GitHub não ativar Pages automaticamente, abra **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-
-URL prevista enquanto não houver domínio próprio:
+URL oficial:
 
 `https://leothaylor.github.io/leothaylor-site/`
 
-## Domínio próprio
-
-Quando o domínio pessoal for escolhido, atualizar `site` e remover/ajustar `base` em `astro.config.mjs`. Os projetos externos permanecem independentes; esta V1 apenas os referencia.
+A V1 foi preservada na branch `archive-v1-2026-09-25`.
